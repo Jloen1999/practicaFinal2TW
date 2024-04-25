@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Resource name="jdbc/MysqlDB" auth="Container"
+		type="javax.sql.DataSource" maxTotal="10" maxIdle="5" maxWaitMillis="10000"
+		driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/cartabd"
+		username="tw" password="tw2324"/>
+
+		
+	<!-- mysql -->
+	<!-- driverClassName="com.mysql.cj.jdbc.Driver" 
+		  url="jdbc:mysql://localhost:3306/carta" 
+		  username="tw" password="tw2223"/> -->
+
+	<!-- Mariadb -->
+	<!-- driverClassName="org.mariadb.jdbc.Driver" url="jdbc:mariadb://localhost:3306/carta" 
+		username="tw" password="tw2223"/> -->
+
+	<!-- h2 -->
+	<!-- driverClassName="org.h2.Driver" 
+		url="jdbc:h2:~/test"
+		username="sa" password="sa"/> -->
+
+	<!-- hsqldb -->
+	<!-- driverClassName="org.hsqldb.jdbcDriver" url="jdbc:hsqldb:file:/src/main/webapp/WEB-INF/exchange/" 
+		username="sa" password="sa"/> -->
+</Context>
