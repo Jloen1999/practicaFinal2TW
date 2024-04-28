@@ -1,11 +1,9 @@
+/*
 package es.unex.cum.tw.services;
 
-import es.unex.cum.tw.models.Carta;
-import es.unex.cum.tw.models.Regalo;
 import es.unex.cum.tw.models.User;
 import es.unex.cum.tw.repositories.CartaRepository;
 import es.unex.cum.tw.repositories.CartaRepositoryJDBCImpl;
-import es.unex.cum.tw.repositories.UserRepositoryJDBCImpl;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -48,19 +46,20 @@ public class CartaServiceJDBCImpl implements CartaService{
         }
     }
 
+
     @Override
-    public boolean existsCartaByUser(User user) throws SQLException {
+    public void deleteRegalosFromCarta(List<String> idRegalos) throws SQLException {
         try{
-            return cartaRepository.existsCartaByUser(user);
+            cartaRepository.deleteRegalosFromCarta(idRegalos);
         } catch (SQLException e) {
             throw new ServiceJdbcException(e.getMessage(), e.getCause());
         }
     }
 
     @Override
-    public boolean existsRegaloByCarta(Carta carta) throws SQLException {
+    public boolean addCantidadToRegalo(int idRegalo, int cantidad) throws SQLException {
         try{
-            return cartaRepository.existsRegaloByCarta(carta);
+            return cartaRepository.addCantidadToRegalo(idRegalo, cantidad);
         } catch (SQLException e) {
             throw new ServiceJdbcException(e.getMessage(), e.getCause());
         }
@@ -68,3 +67,4 @@ public class CartaServiceJDBCImpl implements CartaService{
 
 
 }
+*/

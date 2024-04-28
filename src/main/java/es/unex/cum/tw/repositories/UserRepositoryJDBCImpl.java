@@ -1,3 +1,4 @@
+/*
 package es.unex.cum.tw.repositories;
 
 import es.unex.cum.tw.models.User;
@@ -36,12 +37,16 @@ public class UserRepositoryJDBCImpl implements UserRepository {
 
                 }
             }
+        }catch(SQLException e){
+            throw new RuntimeException(e);
         }
-        return Optional.of(user);
+
+        return Optional.ofNullable(user);
+
     }
 
     @Override
-    public User findByEmail(String email) throws SQLException {
+    public Optional<User> findByEmail(String email) throws SQLException {
         User user = null;
         try (PreparedStatement statement = conn.prepareStatement("SELECT * FROM usuarios WHERE email = ?")) {
             statement.setString(1, email);
@@ -58,11 +63,11 @@ public class UserRepositoryJDBCImpl implements UserRepository {
                 }
             }
         }
-        return user;
+        return Optional.ofNullable(user);
     }
 
     @Override
-    public User findByUsernameAndPassword(String username, String password) throws SQLException {
+    public Optional<User> findByUsernameAndPassword(String username, String password) throws SQLException {
         User user = null;
         try (PreparedStatement statement = conn.prepareStatement("SELECT * FROM usuarios WHERE username = ? AND password = ?")) {
             statement.setString(1, username);
@@ -80,7 +85,7 @@ public class UserRepositoryJDBCImpl implements UserRepository {
                 }
             }
         }
-        return user;
+        return Optional.ofNullable(user);
     }
 
     @Override
@@ -166,3 +171,4 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         return deleteById(user.getId());
     }
 }
+*/

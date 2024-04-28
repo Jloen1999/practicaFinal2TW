@@ -1,0 +1,564 @@
+/* Establece las variables globales para el esquema de colores */
+:root {
+    color-scheme: dark light;
+    /* Overflow-x está comentado */
+    /* overflow-x: hidden; */
+}
+
+/* Estilos para el cuerpo del documento HTML */
+html, body {
+    font-family: Arial, sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    width: 100vw; /* Establece el ancho al 100% del viewport */
+}
+
+/* Estilos para el contenedor del encabezado */
+#header-container {
+    width: 100vw; /* Ancho completo del viewport */
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 0; /* Relleno superior e inferior de 10px, sin relleno lateral */
+    display: flex; /* Establece el modelo de caja flexible */
+    gap: 0.1vw; /* Espacio entre los elementos hijos */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+    background-image: url('./images/biblioteca.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Posición centrada */
+    padding-top: 50px; /* Espaciado superior adicional */
+}
+
+/* Estilos para el logotipo */
+#logo {
+    padding: 0; /* Sin relleno */
+    display: flex; /* Modelo de caja flexible */
+    width: 15vw; /* Ancho del logotipo */
+    height: auto; /* Altura automática */
+    margin-top: -5px; /* Desplazamiento hacia arriba */
+}
+
+/* Estilos para el enlace del logotipo */
+#link-logo {
+    margin: 0; /* Sin margen */
+    padding-left: 5px; /* Relleno izquierdo */
+    display: flex; /* Modelo de caja flexible */
+    flex-direction: column; /* Dirección de columna */
+    align-items: center; /* Alineación vertical */
+    text-decoration: none; /* Sin decoración de texto */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos para el texto del logotipo */
+#text-logo {
+    margin-top: 8px; /* Margen superior */
+    font-size: x-small; /* Tamaño de fuente pequeño */
+    text-decoration: none; /* Sin decoración de texto */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    padding-top: 5px; /* Relleno superior */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilos para la imagen del logotipo */
+#image-logo {
+    width: 18vmin; /* Ancho mínimo de la vista */
+    height: auto; /* Altura automática */
+    border-radius: 25%; /* Borde redondeado */
+}
+
+.menu-header{
+    width: 85vw;
+}
+
+/* Estilos para el contenedor de navegación */
+.nav-links {
+    display: flex; /* Modelo de caja flexible */
+    justify-content: space-around; /* Espacio uniformemente distribuido */
+    gap: 0.5vw; /* Espacio entre elementos */
+    list-style: none; /* Elimina la viñeta de la lista */
+    margin-right: 20px; /* Margen derecho */
+}
+/* Estilos para los enlaces de navegación */
+.nav-links li a {
+    text-decoration: none; /* Sin decoración de texto */
+    color: #fff; /* Color del texto */
+    padding: 10px; /* Relleno */
+    border: 2px solid transparent; /* Borde transparente */
+    border-radius: 11px; /* Borde redondeado */
+    transition: all 0.3s ease; /* Transición suave */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de fuente negrita */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    font-family: 'Times New Roman', Times, serif; /* Fuente secundaria */
+}
+
+/* Estilos para los enlaces de navegación al pasar el mouse */
+.nav-links li a:hover {
+    background-color: black; /* Color de fondo al pasar el mouse */
+    border-color: #999; /* Color del borde al pasar el mouse */
+    color: rgb(0 77 67/1); /* Color del texto al pasar el mouse */
+}
+
+/* Estilos para los títulos de enlace */
+.link-h2 {
+    display: flex; /* Modelo de caja flexible */
+    justify-content: center; /* Alineación centrada horizontal */
+    align-items: center; /* Alineación centrada vertical */
+}
+
+/* Estilos para el menú hamburguesa activo */
+.estilosMenuHamburguesaActive{
+    display: flex !important; /* Mostrar el menú */
+    flex-direction: column !important; /* Dirección de columna */
+    align-items: end !important; /* Alineación derecha */
+    justify-content: start !important; /* Alineación arriba */
+    text-align: center; /* Alineación centrada */
+}
+/* Estilos para el menú hamburguesa desactivado */
+.estilosMenuHamburguesaDisabled{
+    display: flex !important; /* Mostrar el menú */
+    justify-content: space-around !important; /* Espacio uniformemente distribuido */
+    gap: 0.5vw !important; /* Espacio entre elementos */
+    list-style: none !important; /* Elimina la viñeta de la lista */
+    margin-right: 20px !important; /* Margen derecho */
+}
+
+main {
+    padding: 20px;
+}
+
+#libro-container {
+    margin-top: 10vw;
+    width: 100vw;
+    max-width: 80vw;
+    margin: 0 auto
+}
+
+
+#lista-libros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Estilos para los libros */
+.libro {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+}
+/* Estilos para los enlaces de libros */
+.link-libro {
+    color: rgb(0 77 67/1); /* Color del texto */
+}
+/* Estilos para las imágenes de los libros */
+.libro img {
+    position: relative; /* Posición relativa */
+    left: 50%; /* Alineación horizontal */
+    transform: translateX(-50%); /* Centrado horizontal */
+    width: 100%; /* Ancho completo */
+    min-height: 200px; /* Altura mínima */
+    object-fit: cover; /* Ajuste de objeto para cubrir */
+}
+
+/* Estilos para ordenador */
+@media only screen and (min-width: 1024px) {
+    .libro {
+        width: 23%;
+        margin-bottom: 30px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, border-color 0.3 ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .libro:hover {
+        /* subir la imagen a arriba*/
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde superior */
+            0 0 20px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde derecho */
+            0 0 30px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde inferior */
+            0 0 40px rgba(255, 255, 255, 0.7);
+        /* Iluminación blanca en el borde izquierdo */
+        color: lightgreen;
+    }
+
+    #boton-hamburguesa {
+        display: none;
+    }
+
+    #nuevos-libros-container{
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    #nuevos-libros-container li{
+        width: 20vw;
+    }
+
+
+}
+
+/* Estilos para tablet */
+@media only screen and (max-width: 1023px) {
+    .libro {
+        width: 31%;
+        margin-bottom: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .libro:nth-child(even):hover {
+        /* subir la imagen a arriba*/
+        transform: scale(1.05) translateX(-50%);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde superior */
+            0 0 20px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde derecho */
+            0 0 30px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde inferior */
+            0 0 40px rgba(255, 255, 255, 0.7);
+        /* Iluminación blanca en el borde izquierdo */
+        color: lightgreen;
+    }
+
+    .libro:nth-child(odd):hover {
+        /* subir la imagen a arriba*/
+        transform: scale(1.05) translateX(50%);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde superior */
+            0 0 20px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde derecho */
+            0 0 30px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde inferior */
+            0 0 40px rgba(255, 255, 255, 0.7);
+        /* Iluminación blanca en el borde izquierdo */
+        color: lightgreen;
+    }
+
+    #boton-hamburguesa {
+        display: none;
+    }
+
+    #nuevos-libros-container{
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    #nuevos-libros-container li{
+        width: 30vw;
+    }
+
+}
+
+/* Estilos para móvil */
+@media only screen and (max-width: 767px) {
+    .libro {
+        width: 48%;
+        margin: 0 auto;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .libro:nth-child(even):hover {
+        /* subir la imagen a arriba*/
+        transform: none;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde superior */
+            0 0 20px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde derecho */
+            0 0 30px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde inferior */
+            0 0 40px rgba(255, 255, 255, 0.7);
+        /* Iluminación blanca en el borde izquierdo */
+        color: lightgreen;
+    }
+
+    .libro:nth-child(odd):hover {
+        /* subir la imagen a arriba*/
+        transform: none;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde superior */
+            0 0 20px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde derecho */
+            0 0 30px rgba(255, 255, 255, 0.7),
+            /* Iluminación blanca en el borde inferior */
+            0 0 40px rgba(255, 255, 255, 0.7);
+        /* Iluminación blanca en el borde izquierdo */
+        color: lightgreen;
+    }
+
+    #reserva-container,
+    #formulario {
+        width: 90vw;
+        font-size: 10px;
+    }
+
+    .menu-hamburguesa{
+        display: flex;
+        justify-content: end;
+        align-items: start;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #boton-hamburguesa {
+        margin-right: 40px;
+        display: block;
+        width: 8vw;
+        cursor: pointer;
+    }
+
+    #nuevos-libros-container{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    #nuevos-libros-container li{
+        width: 60vw;
+    }
+
+}
+
+/* Estilos para el carrusel */
+#carousel {
+    display: flex; /* Modelo de caja flexible */
+    animation: slide 10s infinite; /* Animación de deslizamiento */
+}
+/* Estilos para las imágenes del carrusel */
+#carousel img {
+    width: 20vw; /* Ancho del 20% del viewport */
+    height: 20vh; /* Altura del 20% del viewport */
+    object-fit: cover; /* Ajuste de objeto para cubrir */
+}
+/* Animación de deslizamiento */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* Translación inicial */
+    }
+
+    100% {
+        transform: translateX(-100%); /* Translación final */
+    }
+}
+
+/* Estilos para el contenedor de novedades */
+#novedades-container {
+    position: relative; /* Posición relativa */
+    width: 100vw; /* Ancho completo del viewport */
+    max-width: 80vw; /* Ancho máximo */
+    overflow: hidden; /* Ocultar el desbordamiento */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Estilos para el contenedor de reserva */
+#reserva-container {
+    display: flex; /* Modelo de caja flexible */
+    flex-direction: column; /* Dirección de columna */
+    justify-content: center; /* Alineación centrada vertical */
+    align-items: center; /* Alineación centrada horizontal */
+}
+
+/* Estilos para el formulario */
+#formulario {
+    background-color: white; /* Color de fondo blanco */
+    border: 1px solid #ccc; /* Borde sólido */
+    padding: 20px; /* Relleno */
+    border-radius: 10px; /* Borde redondeado */
+    display: flex; /* Modelo de caja flexible */
+    flex-direction: column; /* Dirección de columna */
+    gap: 20px; /* Espacio entre elementos */
+    width: 80vmin; /* Ancho del 80% de la ventana mínima */
+    transition: transform 0.3s ease-in-out, border-color 0.3 ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+    color: black; /* Color del texto */
+}
+/* Estilos al pasar el mouse sobre el formulario */
+#formulario:hover {
+    border-color: blue; /* Color del borde al pasar el mouse */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra al pasar el mouse */
+    transform: scale(1.05); /* Escalado al pasar el mouse */
+}
+/* Estilos para el contenido de la sección */
+.section-content {
+    display: flex;  /* Modelo de caja flexible */
+    width: 100%;
+    height: 100%;
+    gap: 120px
+}
+
+.lista-biblioteca {
+    list-style: none;
+}
+
+
+.label-name {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    max-width: 50px;
+}
+
+.span-nota {
+    color: #777
+}
+
+.primera-letra {
+    color: red;
+}
+
+
+footer {
+    display: flex;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50% -50%);
+    gap: 38px
+}
+
+select {
+    background-color: #ccc;
+    margin-left: 20px;
+}
+
+textarea {
+    margin-left: 20px;
+    border-color: #ccc;
+    border-radius: 5px;
+}
+
+
+input {
+    max-width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.1s ease-in-out
+}
+
+input:focus {
+    border-color: blue;
+
+}
+
+
+input[type="submit"],
+input[type="reset"]{
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 11px;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    margin-right: 10px;
+    position: relative; /* Agregamos posición relativa para poder posicionar el pseudo-elemento */
+}
+
+input[type="radio"]:checked {
+    background-color: orange;
+    border-color: red;
+}
+
+input[type="radio"]:checked::after {
+    content: '·';
+    font-size: 35px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.span-label {
+    border-bottom: 1px solid red;
+}
+
+.span-label-info:after {
+    content: '';
+    height: 1px;
+    width: 100px;
+    display: block;
+    background-color: red;
+}
+
+#libro-select {
+    border-color: black;
+    color: black;
+}
+
+#libro-select option {
+    color: rgb(0 77 67/1);
+    font-weight: bold;
+}
+
+.subrayado {
+    text-decoration: underline;
+    color: green;
+}
+
+/* Estilos para el visor de libros */
+#nuevos-libros-container{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+    gap: 5vw;
+}
+
+#nuevos-libros-container li{
+    height: 50vw;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, border-color 0.3 ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tecla-activa{
+   /* Añadir estilos modernos al pulsar un boton */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+    /* Iluminación blanca en el borde superior */
+    0 0 20px rgba(255, 255, 255, 0.7),
+    /* Iluminación blanca en el borde derecho */
+    0 0 30px rgba(138, 139, 214, 0.7),
+    /* Iluminación blanca en el borde inferior */
+    0 0 40px rgba(219, 107, 107, 0.7);
+    /* Iluminación blanca en el borde izquierdo */
+    color: lightblue; 
+}
+
+/* Estilos para el pie de página del formulario */
+#footerFormulario {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Alineación centrada */
+    padding: 10px 0; /* Relleno superior e inferior */
+    bottom: 0; /* Coloca el pie de página en la parte inferior */
+    width: 100%; /* Ancho completo */
+}
+
+/* Estilos para el pie de página final */
+#footerFinal {
+    display: flex; /* Modelo de caja flexible */
+    justify-content: center; /* Alineación centrada horizontal */
+    align-items: center; /* Alineación centrada vertical */
+    font-size: small; /* Tamaño de fuente pequeño */
+    font-family: 'Times New Roman', Times, serif; /* Fuente secundaria */
+}

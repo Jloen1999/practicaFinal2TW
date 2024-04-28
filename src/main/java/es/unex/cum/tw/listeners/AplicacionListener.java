@@ -1,6 +1,5 @@
 package es.unex.cum.tw.listeners;
 
-import es.unex.cum.tw.models.Carta;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebListener;
 import jakarta.servlet.http.HttpSession;
@@ -27,8 +26,9 @@ public class AplicacionListener implements ServletContextListener, ServletReques
     public void sessionCreated(HttpSessionEvent se) {
         servletContext.log("Sesión creada: " + se.getSession().getId());
         HttpSession session = se.getSession();
-        Carta carta = new Carta();
-        session.setAttribute("carta", carta);
+
+        /*User user = new User();
+        session.setAttribute("user", user);*/
     }
 
     @Override

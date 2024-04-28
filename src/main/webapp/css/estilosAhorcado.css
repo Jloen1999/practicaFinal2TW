@@ -1,0 +1,56 @@
+/* estilos_ahorcado.css */
+
+
+#ahorcado-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+#palabra-container {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+#intentos-container {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+#teclado-container {
+    margin: 20px 0;
+}
+
+#teclado-container button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#teclado-container button:hover {
+    background-color: #45a049;
+}
+
+#reiniciar-juego {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reiniciar-juego:hover {
+    background-color: #c62828;
+}

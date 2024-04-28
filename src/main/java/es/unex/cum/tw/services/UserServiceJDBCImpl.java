@@ -1,3 +1,4 @@
+/*
 package es.unex.cum.tw.services;
 
 import es.unex.cum.tw.models.User;
@@ -20,7 +21,7 @@ public class UserServiceJDBCImpl implements UserService{
     @Override
     public Optional<User> login(String username, String password) {
         try {
-            return Optional.ofNullable(userRepository.findByUsernameAndPassword(username, password)).filter(user -> user.getPassword().equals(password));
+            return userRepository.findByUsernameAndPassword(username, password).filter(user -> user.getPassword().equals(password));
         } catch (SQLException e) {
             throw new ServiceJdbcException(e.getMessage(), e.getCause());
         }
@@ -81,3 +82,4 @@ public class UserServiceJDBCImpl implements UserService{
         }
     }
 }
+*/
