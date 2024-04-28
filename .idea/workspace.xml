@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3553e393-b228-4a5d-825c-f11c31174ce0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Request" />
+        <option value="package-info" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HttpClientSelectedEnvironments">
+    <file url="file://$USER_HOME$/AppData/Local/Temp/whats-new-dir/whats-new.http" environment="test" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2edEOCGYTvKBC6NJRDiwu3nUSkG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CuentaCeros.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.es.unex.cum.tw.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.review.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tomcat.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.webapp-sesion7 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.webapp-sesion7 [install].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.MainTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.MainTest.testGetChulotRecursive.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.MainTest.testGetChulotRecursiveWithNulls.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/JLOel/Desktop/asignaturas/tw/practicaFinal2TW/src/main/webapp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/JLOel/Desktop/reviewJava/src/main/java/es/unex/cum/repaso/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\webapp" />
+      <recent name="C:\Users\JLOel\Desktop\reviewJava\src\main\webapp" />
+      <recent name="C:\Users\JLOel\Desktop\reviewJava\src\main" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JLOel\Desktop\reviewJava" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="es.unex.cum.repaso" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="es.unex.cum.tw.repositories" />
+      <recent name="es.unex.cum.tw.services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.tomcat">
+    <configuration name="CuentaCeros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.unex.cum.repaso.CuentaCeros" />
+      <module name="reviewJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.unex.cum.repaso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.unex.cum.repaso.Main" />
+      <module name="reviewJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.unex.cum.repaso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="es.unex.cum.tw.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.unex.cum.tw.Main" />
+      <module name="reviewJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.unex.cum.tw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="review" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.unex.cum.repaso.review" />
+      <module name="reviewJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.unex.cum.repaso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reviewJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.unex.cum.repaso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.unex.cum.repaso" />
+      <option name="MAIN_CLASS_NAME" value="es.unex.cum.repaso.MainTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tomcat" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="tomcat7:redeploy" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.es.unex.cum.tw.Main" />
+      <item itemvalue="Application.CuentaCeros" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.review" />
+      <item itemvalue="JUnit.MainTest" />
+      <item itemvalue="Maven.tomcat" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.es.unex.cum.tw.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.review" />
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="Application.CuentaCeros" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3553e393-b228-4a5d-825c-f11c31174ce0" name="Changes" comment="" />
+      <created>1712226022759</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712226022759</updated>
+      <workItem from="1712226023724" duration="2084000" />
+      <workItem from="1712252509622" duration="3771000" />
+      <workItem from="1712263135686" duration="849000" />
+      <workItem from="1712310382658" duration="1216000" />
+      <workItem from="1712313416610" duration="665000" />
+      <workItem from="1712656498941" duration="3860000" />
+      <workItem from="1712686064357" duration="21000" />
+      <workItem from="1712686254767" duration="1542000" />
+      <workItem from="1712689147517" duration="1203000" />
+      <workItem from="1712700556487" duration="8509000" />
+      <workItem from="1712711731122" duration="35000" />
+      <workItem from="1712739642540" duration="627000" />
+      <workItem from="1712783064390" duration="3891000" />
+      <workItem from="1712830539686" duration="2339000" />
+      <workItem from="1712836256480" duration="321000" />
+      <workItem from="1712837421083" duration="450000" />
+      <workItem from="1712846364584" duration="2716000" />
+      <workItem from="1712850584699" duration="31000" />
+      <workItem from="1712999461643" duration="7532000" />
+      <workItem from="1713257785518" duration="5401000" />
+      <workItem from="1713778421186" duration="1206000" />
+      <workItem from="1713780253426" duration="766000" />
+      <workItem from="1713781080034" duration="13079000" />
+      <workItem from="1713809364648" duration="31025000" />
+      <workItem from="1713863716489" duration="7545000" />
+      <workItem from="1713975686382" duration="1906000" />
+      <workItem from="1713993204605" duration="8021000" />
+      <workItem from="1714031229521" duration="8129000" />
+      <workItem from="1714158875056" duration="2743000" />
+      <workItem from="1714162629976" duration="8768000" />
+      <workItem from="1714172141318" duration="36679000" />
+      <workItem from="1714316139546" duration="57000" />
+      <workItem from="1714317166783" duration="3675000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/es/unex/cum/repaso/Main.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
