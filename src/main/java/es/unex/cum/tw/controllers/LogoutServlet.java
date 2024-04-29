@@ -1,11 +1,8 @@
-/*
 package es.unex.cum.tw.controllers;
 
 import es.unex.cum.tw.models.User;
 import es.unex.cum.tw.services.LoginService;
 import es.unex.cum.tw.services.LoginServiceImpl;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,9 +28,8 @@ public class LogoutServlet extends HttpServlet {
             session.invalidate();
         }
 
-        response.sendRedirect(request.getContextPath() + "/Autenticar.html");
+        response.sendRedirect(request.getContextPath() + "/index.jsp");
 
     }
 
 }
-*/

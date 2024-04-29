@@ -1,7 +1,5 @@
 package es.unex.cum.tw.models;
 
-import java.util.UUID;
-
 public class UserBuilder {
     private int id;
     private String nombre;
@@ -50,6 +48,6 @@ public class UserBuilder {
     }
 
     public User build() {
-        return new User(id, nombre, apellidos, email, username, password);
+        return new User(nombre, apellidos, email, username, password);
     }
 }

@@ -1,4 +1,3 @@
-/*
 package es.unex.cum.tw.repositories;
 
 import es.unex.cum.tw.models.User;
@@ -20,51 +19,6 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         this.conn = conn;
     }
 
-    @Override
-    public Optional<User> findByUsername(String username) throws SQLException {
-        User user = null;
-        try(PreparedStatement statement = conn.prepareStatement("SELECT * FROM usuarios WHERE username = ?")){
-            statement.setString(1, username);
-            try(ResultSet rs = statement.executeQuery()){
-                if(rs.next()){
-                    user = new UserBuilder().setId(rs.getInt("id"))
-                            .setNombre(rs.getString("nombre"))
-                            .setApellidos(rs.getString("apellidos"))
-                            .setEmail(rs.getString("email"))
-                            .setUsername(rs.getString("username"))
-                            .setPassword(rs.getString("password"))
-                            .build();
-
-                }
-            }
-        }catch(SQLException e){
-            throw new RuntimeException(e);
-        }
-
-        return Optional.ofNullable(user);
-
-    }
-
-    @Override
-    public Optional<User> findByEmail(String email) throws SQLException {
-        User user = null;
-        try (PreparedStatement statement = conn.prepareStatement("SELECT * FROM usuarios WHERE email = ?")) {
-            statement.setString(1, email);
-            try (ResultSet rs = statement.executeQuery()) {
-                if (rs.next()) {
-                    user = new UserBuilder().setId(rs.getInt("id"))
-                            .setNombre(rs.getString("nombre"))
-                            .setApellidos(rs.getString("apellidos"))
-                            .setEmail(rs.getString("email"))
-                            .setUsername(rs.getString("username"))
-                            .setPassword(rs.getString("password"))
-                            .build();
-
-                }
-            }
-        }
-        return Optional.ofNullable(user);
-    }
 
     @Override
     public Optional<User> findByUsernameAndPassword(String username, String password) throws SQLException {
@@ -74,7 +28,7 @@ public class UserRepositoryJDBCImpl implements UserRepository {
             statement.setString(2, password);
             try (ResultSet rs = statement.executeQuery()) {
                 if (rs.next()) {
-                    user = new UserBuilder().setId(rs.getInt("id"))
+                    user = new UserBuilder().setId(rs.getInt("idUsuario"))
                             .setNombre(rs.getString("nombre"))
                             .setApellidos(rs.getString("apellidos"))
                             .setEmail(rs.getString("email"))
@@ -89,13 +43,13 @@ public class UserRepositoryJDBCImpl implements UserRepository {
     }
 
     @Override
-    public Optional<User> findById(int id) throws SQLException {
+    public Optional<User> findById(int idUsuario) throws SQLException {
         User user = null;
-        try (PreparedStatement statement = conn.prepareStatement("SELECT * FROM usuarios WHERE id = ?")) {
-            statement.setLong(1, id);
+        try (PreparedStatement statement = conn.prepareStatement("SELECT * FROM usuarios WHERE idUsuario = ?")) {
+            statement.setLong(1, idUsuario);
             try (ResultSet rs = statement.executeQuery()) {
                 if (rs.next()) {
-                    user = new UserBuilder().setId(rs.getInt("id"))
+                    user = new UserBuilder().setId(rs.getInt("idUsuario"))
                             .setNombre(rs.getString("nombre"))
                             .setApellidos(rs.getString("apellidos"))
                             .setEmail(rs.getString("email"))
@@ -117,7 +71,7 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         try (PreparedStatement statement = conn.prepareStatement("SELECT * FROM usuarios")) {
             try (ResultSet rs = statement.executeQuery()) {
                 while (rs.next()) {
-                    User user = new UserBuilder().setId(rs.getInt("id"))
+                    User user = new UserBuilder().setId(rs.getInt("idUsuario"))
                             .setNombre(rs.getString("nombre"))
                             .setApellidos(rs.getString("apellidos"))
                             .setEmail(rs.getString("email"))
@@ -147,7 +101,7 @@ public class UserRepositoryJDBCImpl implements UserRepository {
     @Override
     public boolean update(User user) throws SQLException {
         try (PreparedStatement statement = conn.prepareStatement(
-                "UPDATE usuarios SET nombre = ?, apellidos = ?, email = ?, username = ?, password = ? WHERE id = ?")) {
+                "UPDATE usuarios SET nombre = ?, apellidos = ?, email = ?, username = ?, password = ? WHERE idUsuario = ?")) {
             statement.setString(1, user.getNombre());
             statement.setString(2, user.getApellidos());
             statement.setString(3, user.getEmail());
@@ -159,9 +113,9 @@ public class UserRepositoryJDBCImpl implements UserRepository {
     }
 
     @Override
-    public boolean deleteById(int id) throws SQLException {
-        try (PreparedStatement statement = conn.prepareStatement("DELETE FROM usuarios WHERE id = ?")) {
-            statement.setLong(1, id);
+    public boolean deleteById(int idUsuario) throws SQLException {
+        try (PreparedStatement statement = conn.prepareStatement("DELETE FROM usuarios WHERE idUsuario = ?")) {
+            statement.setLong(1, idUsuario);
             return statement.executeUpdate() > 0;
         }
     }
@@ -171,4 +125,3 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         return deleteById(user.getId());
     }
 }
-*/

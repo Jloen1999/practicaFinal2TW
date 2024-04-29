@@ -25,10 +25,10 @@ import java.util.Optional;
 import java.util.Properties;
 
 @WebServlet(
-        name = "LoginServlet",
-        value = "/login"
+        name = "RegistroServlet",
+        value = "/registro"
 )
-public class LoginServlet extends HttpServlet {
+public class SignUpServlet extends HttpServlet {
     private Properties props;
     private String USERNAMEADMIN;
     private String PASSWORDADMIN;
@@ -62,42 +62,49 @@ public class LoginServlet extends HttpServlet {
         Optional<User> userOptional = service.login(username, password);
 
         HttpSession session = request.getSession();
-        if (userOptional.isPresent()) {
-            session.setAttribute("user", userOptional.get());
-            request.setAttribute("mensaje", "El usuario " + userOptional.get().getUsername() + " ya está registrado en la base de datos");
+        if (userOptional.isEmpty()) { // Si el usuario no está registrado
+            String name = request.getParameter("name");
+            String lastname = request.getParameter("lastname");
+            String email = request.getParameter("email");
 
-            ReservaService serviceReserva = new ReservaServiceJDBCImpl(conn);
-            try {
-                List<Reserva> reservas = serviceReserva.getReservasByUserId(userOptional.get());
-                List<Libro> libros = new ArrayList<>();
-                session.setAttribute("reservas", reservas);
-                // Obtener el libro de cada reserva
-                for (Reserva reserva : reservas) {
-                    Optional<Libro> libroOptional = serviceReserva.getLibroByReservaId(reserva.getIdLibro());
-                    libroOptional.ifPresent(libros::add);
+            if(name == null || name.isBlank() || lastname == null || lastname.isBlank() || email == null || email.isBlank()){
+                request.setAttribute("mensaje", "Debes rellenar todos los campos");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ahorcado.html");
+                try {
+                    dispatcher.forward(request, response);
+                } catch (ServletException e) {
+                    throw new RuntimeException(e);
                 }
-                session.setAttribute("libros", libros);
+            }
+            UserService userService = new UserServiceJDBCImpl(conn);
+            User user = new UserBuilder()
+                    .setUsername(username)
+                    .setPassword(password)
+                    .setNombre(name)
+                    .setApellidos(lastname)
+                    .setEmail(email)
+                    .build();
+
+            try {
+                if (!userService.save(user)) {
+                    response.sendRedirect(request.getContextPath() + "/ahorcado.html");
+                }
+                session.setAttribute("user", user);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
 
+            request.setAttribute("mensaje", "Usuario registrado correctamente");
 
-            if (username.equals(USERNAMEADMIN) && password.equals(PASSWORDADMIN)) {
-
-            } else {
-
-
-            }
 
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
             try {
                 dispatcher.forward(request, response);
-            } catch (ServletException e) {
+            } catch (ServletException | IOException e) {
                 throw new RuntimeException(e);
             }
-
-        } else {
-            request.setAttribute("mensaje", "Usuario no registrado, por favor regístrese");
+        }else{
+            request.setAttribute("mensaje", "El usuario " + userOptional.get().getUsername() + " ya está registrado en la base de datos");
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
             try {
                 dispatcher.forward(request, response);

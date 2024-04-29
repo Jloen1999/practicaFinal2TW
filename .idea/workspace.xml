@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3553e393-b228-4a5d-825c-f11c31174ce0" name="Changes" comment="" />
+    <list default="true" id="3553e393-b228-4a5d-825c-f11c31174ce0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ActionServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/SignUpServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/Reserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/Valoracion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepositoryJDBCImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Ahorcardo.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/librosReservados.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/UserBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/UserBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/CartaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/CartaRepositoryJDBCImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/RegaloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/RegaloRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepositoryJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepositoryJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/CartaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/CartaServiceJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaServiceJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserServiceJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserServiceJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/tw.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/tw.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/twNew.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/validarFormulario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/validarFormulario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/libros.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/novedades.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/reservas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/scriptsJS.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scriptsJS.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +56,8 @@
         <option value="HTTP Request" />
         <option value="package-info" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +103,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/JLOel/Desktop/asignaturas/tw/practicaFinal2TW/src/main/webapp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/JLOel/Desktop/asignaturas/tw/practicaFinal2TW/src/main/java/es/unex/cum/tw/repositories&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -87,6 +127,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\java\es\unex\cum\tw\repositories" />
       <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\webapp" />
       <recent name="C:\Users\JLOel\Desktop\reviewJava\src\main\webapp" />
       <recent name="C:\Users\JLOel\Desktop\reviewJava\src\main" />
@@ -95,12 +136,14 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\webapp" />
       <recent name="C:\Users\JLOel\Desktop\reviewJava" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="es.unex.cum.repaso" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="es.unex.cum.tw.controllers" />
       <recent name="es.unex.cum.tw.repositories" />
       <recent name="es.unex.cum.tw.services" />
     </key>
@@ -269,7 +312,8 @@
       <workItem from="1714162629976" duration="8768000" />
       <workItem from="1714172141318" duration="36679000" />
       <workItem from="1714316139546" duration="57000" />
-      <workItem from="1714317166783" duration="3675000" />
+      <workItem from="1714317166783" duration="52992000" />
+      <workItem from="1714423058159" duration="311000" />
     </task>
     <servers />
   </component>
