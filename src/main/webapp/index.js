@@ -6,11 +6,7 @@ function tooltipActive() {
 
 }
 
-function showToast() {
-    const toastLiveExample = document.getElementById('liveToast')
-    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-    toastBootstrap.show();
-}
+
 
 function formValidation() {
     // Fetch all the forms we want to apply custom Bootstrap validation styles to

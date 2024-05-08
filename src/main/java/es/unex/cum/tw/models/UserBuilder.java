@@ -48,6 +48,6 @@ public class UserBuilder {
     }
 
     public User build() {
-        return new User(nombre, apellidos, email, username, password);
+        return new User(id,nombre, apellidos, email, username, password);
     }
 }

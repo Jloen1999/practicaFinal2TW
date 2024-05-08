@@ -114,9 +114,31 @@ public class UserRepositoryJDBCImpl implements UserRepository {
 
     @Override
     public boolean deleteById(int idUsuario) throws SQLException {
+        // Primero eliminar el usuario en las tablas en las que tiene relacion
+        eliminarReservasUsuario(idUsuario);
+        eliminarValoracionesUsuario(idUsuario);
         try (PreparedStatement statement = conn.prepareStatement("DELETE FROM usuarios WHERE idUsuario = ?")) {
             statement.setLong(1, idUsuario);
             return statement.executeUpdate() > 0;
+        }
+
+    }
+
+    private void eliminarValoracionesUsuario(int idUsuario) {
+        try (PreparedStatement statement = conn.prepareStatement("DELETE FROM valoraciones WHERE idUsuario = ?")) {
+            statement.setLong(1, idUsuario);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void eliminarReservasUsuario(int idUsuario) {
+        try (PreparedStatement statement = conn.prepareStatement("DELETE FROM reservas WHERE idUsuario = ?")) {
+            statement.setLong(1, idUsuario);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 

@@ -39,4 +39,40 @@ public class UserServiceJDBCImpl implements UserService{
         }
     }
 
+    @Override
+    public List<User> findAll() throws SQLException {
+        try{
+            return userRepository.findAll();
+        } catch (SQLException e) {
+            throw new ServiceJdbcException(e.getMessage(), e.getCause());
+        }
+    }
+
+    @Override
+    public boolean deleteUserById(int id) throws SQLException {
+        try{
+            return userRepository.deleteById(id);
+        } catch (SQLException e) {
+            throw new ServiceJdbcException(e.getMessage(), e.getCause());
+        }
+    }
+
+    @Override
+    public Optional<User> findByUsernameAndPassword(String username, String password) throws SQLException {
+        try{
+            return userRepository.findByUsernameAndPassword(username, password);
+        } catch (SQLException e) {
+            throw new ServiceJdbcException(e.getMessage(), e.getCause());
+        }
+    }
+
+    @Override
+    public Optional<User> findUserById(int idUsuario) throws SQLException {
+        try{
+            return userRepository.findById(idUsuario);
+        } catch (SQLException e) {
+            throw new ServiceJdbcException(e.getMessage(), e.getCause());
+        }
+    }
+
 }

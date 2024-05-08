@@ -13,7 +13,7 @@
     <!-- Contenido principal -->
     <main>
         <!-- Contenedor de novedades -->
-        <%@ include file="noticiasCarousel.jsp" %>
+        <%@ include file="LibrosNovedadCarousel.jsp" %>
 
         <!-- Contenedor de libros -->
         <%@ include file="librosCard.jsp" %>

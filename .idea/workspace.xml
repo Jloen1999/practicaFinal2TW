@@ -5,44 +5,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3553e393-b228-4a5d-825c-f11c31174ce0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ActionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/SignUpServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/Libro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/Reserva.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/Valoracion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepositoryJDBCImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Ahorcardo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/librosReservados.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RealcoinWays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/AnadirLibroServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/CrearUsuarioServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarLibros.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarReservaLibroServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarReservarLibroServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarUsuarioServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/FiltroLibroServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/MostrarLibrosReservadosServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/MostrarLibrosServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ReservarLibroServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/LibroBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LibroService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LibroServiceJDBCImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/util/MetodosUtilizables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/AnadirLibro.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/CrearUsuario.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/DropdownLibrosReservados.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LibrosNovedadCarousel.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/loginLg.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/mostrarLibros.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/mostrarLibrosReservados.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/abb13532-12ba-42aa-9620-514610e9b9e8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/abb13532-12ba-42aa-9620-514610e9b9e8/storage_v2/_src_/schema/tw.gw4AAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ActionServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ActionSignInUpServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/SignUpServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/filters/ConexionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/filters/ConexionFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/listeners/AplicacionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/listeners/AplicacionListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/Libro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/UserBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/models/UserBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/CartaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/CartaRepositoryJDBCImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/RegaloRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/RegaloRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepositoryJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepositoryJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepositoryJDBCImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepositoryJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/CartaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/CartaServiceJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaServiceJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaServiceJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaServiceJDBCImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserServiceJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserServiceJDBCImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/util/ConexionBD_DSPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/util/ConexionBD_DSPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/addRegisters.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/tw.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/tw.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/conf/twNew.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/head.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/script.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/validarFormulario.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/validarFormulario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/libros.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/novedades.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/reservas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/librosCard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/librosCard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/librosReservados.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/noticiasCarousel.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/prueba.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/prueba.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/scriptsJS.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/scriptsJS.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +83,7 @@
         <option value="package-info" />
         <option value="JUnit5 Test Class" />
         <option value="Jsp File" />
+        <option value="com.intellij.jpb.JpaEntity" />
         <option value="Class" />
       </list>
     </option>
@@ -64,69 +91,102 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jloen1999&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Jloen1999/practicaFinal2TW.git&quot;,
+    &quot;accountId&quot;: &quot;0f22d38a-00b4-4f17-ae4e-93e655df6a87&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarReservarLibroServlet.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/MostrarLibrosServlet.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="HttpClientSelectedEnvironments">
     <file url="file://$USER_HOME$/AppData/Local/Temp/whats-new-dir/whats-new.http" environment="test" />
+  </component>
+  <component name="JspContextManager">
+    <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/header.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MigrationScriptOptions">
+    <option name="ignoreImplicitObjects" value="true" />
+    <option name="ignoreSourceCode" value="false" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2edEOCGYTvKBC6NJRDiwu3nUSkG" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CuentaCeros.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.es.unex.cum.tw.Main.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.review.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MainTest.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tomcat.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.webapp-sesion7 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.webapp-sesion7 [install].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.MainTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.MainTest.testGetChulotRecursive.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.MainTest.testGetChulotRecursiveWithNulls.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/JLOel/Desktop/asignaturas/tw/practicaFinal2TW/src/main/java/es/unex/cum/tw/repositories&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/JLOel/Desktop/reviewJava/src/main/java/es/unex/cum/repaso/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CuentaCeros.executor": "Run",
+    "Application.Main (1).executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.RealcoinWays.executor": "Run",
+    "Application.es.unex.cum.tw.Main.executor": "Run",
+    "Application.review.executor": "Run",
+    "JUnit.MainTest.executor": "Run",
+    "Maven.tomcat.executor": "Run",
+    "Maven.webapp-sesion7 [clean].executor": "Run",
+    "Maven.webapp-sesion7 [install].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.MainTest.executor": "Run",
+    "TestNG.MainTest.testGetChulotRecursive.executor": "Run",
+    "TestNG.MainTest.testGetChulotRecursiveWithNulls.executor": "Run",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "database.data.extractors.current.export.id": "SQL-Insert-Multirow.sql.groovy",
+    "database.data.extractors.current.id": "SQL-Insert-Multirow.sql.groovy",
+    "full.screen.before.presentation.mode": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/JLOel/Desktop/asignaturas/practicaFinal2TW/src/main/webapp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/JLOel/Desktop/reviewJava/src/main/java/es/unex/cum/repaso/Main.java",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JLOel\Desktop\asignaturas\practicaFinal2TW\src\main\webapp" />
       <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\java\es\unex\cum\tw\repositories" />
       <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\webapp" />
       <recent name="C:\Users\JLOel\Desktop\reviewJava\src\main\webapp" />
@@ -144,24 +204,11 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="es.unex.cum.tw.controllers" />
-      <recent name="es.unex.cum.tw.repositories" />
       <recent name="es.unex.cum.tw.services" />
+      <recent name="es.unex.cum.tw.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.tomcat">
-    <configuration name="CuentaCeros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="es.unex.cum.repaso.CuentaCeros" />
-      <module name="reviewJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="es.unex.cum.repaso.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.es.unex.cum.tw.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="es.unex.cum.repaso.Main" />
       <module name="reviewJava" />
@@ -175,9 +222,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RealcoinWays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RealcoinWays" />
+      <module name="webapp-sesion7" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="es.unex.cum.tw.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="es.unex.cum.tw.Main" />
-      <module name="reviewJava" />
+      <module name="webapp-sesion7" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="es.unex.cum.tw.*" />
@@ -247,8 +301,8 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.RealcoinWays" />
       <item itemvalue="Application.es.unex.cum.tw.Main" />
-      <item itemvalue="Application.CuentaCeros" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.review" />
       <item itemvalue="JUnit.MainTest" />
@@ -257,10 +311,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.es.unex.cum.tw.Main" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.review" />
         <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="Application.CuentaCeros" />
+        <item itemvalue="Application.review" />
+        <item itemvalue="Application.RealcoinWays" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -314,6 +368,23 @@
       <workItem from="1714316139546" duration="57000" />
       <workItem from="1714317166783" duration="52992000" />
       <workItem from="1714423058159" duration="311000" />
+      <workItem from="1714424379665" duration="921000" />
+      <workItem from="1714478210810" duration="4246000" />
+      <workItem from="1714487606534" duration="16244000" />
+      <workItem from="1714636057989" duration="12563000" />
+      <workItem from="1714671211627" duration="14173000" />
+      <workItem from="1714689514985" duration="55364000" />
+      <workItem from="1714838787985" duration="29320000" />
+      <workItem from="1714897697284" duration="29584000" />
+      <workItem from="1714927833881" duration="10304000" />
+      <workItem from="1714998258893" duration="3810000" />
+      <workItem from="1715002152930" duration="10960000" />
+      <workItem from="1715026808455" duration="2619000" />
+      <workItem from="1715073321014" duration="8206000" />
+      <workItem from="1715089324081" duration="6000" />
+      <workItem from="1715089788438" duration="35000" />
+      <workItem from="1715090773761" duration="1545000" />
+      <workItem from="1715174078514" duration="2053000" />
     </task>
     <servers />
   </component>
@@ -330,5 +401,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

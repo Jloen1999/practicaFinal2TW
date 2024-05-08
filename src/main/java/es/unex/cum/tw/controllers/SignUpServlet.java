@@ -1,11 +1,7 @@
 package es.unex.cum.tw.controllers;
 
-import es.unex.cum.tw.models.Libro;
-import es.unex.cum.tw.models.Reserva;
 import es.unex.cum.tw.models.User;
 import es.unex.cum.tw.models.UserBuilder;
-import es.unex.cum.tw.services.ReservaService;
-import es.unex.cum.tw.services.ReservaServiceJDBCImpl;
 import es.unex.cum.tw.services.UserService;
 import es.unex.cum.tw.services.UserServiceJDBCImpl;
 import jakarta.servlet.RequestDispatcher;
@@ -19,33 +15,20 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
-import java.util.Properties;
 
 @WebServlet(
         name = "RegistroServlet",
         value = "/registro"
 )
 public class SignUpServlet extends HttpServlet {
-    private Properties props;
-    private String USERNAMEADMIN;
-    private String PASSWORDADMIN;
     private static String username;
     private static String password;
 
     @Override
     public void init() throws ServletException {
         super.init();
-        props = new Properties();
-        try {
-            props.load(getClass().getClassLoader().getResourceAsStream("config.properties"));
-            USERNAMEADMIN = props.getProperty("USERNAME");
-            PASSWORDADMIN = props.getProperty("PASSWORD");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
         username = "";
         password = "";
     }
@@ -67,7 +50,7 @@ public class SignUpServlet extends HttpServlet {
             String lastname = request.getParameter("lastname");
             String email = request.getParameter("email");
 
-            if(name == null || name.isBlank() || lastname == null || lastname.isBlank() || email == null || email.isBlank()){
+            if (name == null || name.isBlank() || lastname == null || lastname.isBlank() || email == null || email.isBlank()) {
                 request.setAttribute("mensaje", "Debes rellenar todos los campos");
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ahorcado.html");
                 try {
@@ -87,31 +70,25 @@ public class SignUpServlet extends HttpServlet {
 
             try {
                 if (!userService.save(user)) {
-                    response.sendRedirect(request.getContextPath() + "/ahorcado.html");
+                    request.setAttribute("mensaje", "Error al registrar el usuario");
+                }else{
+                    session.setAttribute("user", user);
+                    request.setAttribute("mensaje", "Usuario registrado correctamente");
                 }
-                session.setAttribute("user", user);
+
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
 
-            request.setAttribute("mensaje", "Usuario registrado correctamente");
+        } else {
+            request.setAttribute("mensaje", "Error, el usuario " + userOptional.get().getUsername() + " ya está registrado en la base de datos");
+        }
 
-
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
-            try {
-                dispatcher.forward(request, response);
-            } catch (ServletException | IOException e) {
-                throw new RuntimeException(e);
-            }
-        }else{
-            request.setAttribute("mensaje", "El usuario " + userOptional.get().getUsername() + " ya está registrado en la base de datos");
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
-            try {
-                dispatcher.forward(request, response);
-            } catch (ServletException e) {
-                throw new RuntimeException(e);
-            }
-
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
         }
 
 
@@ -128,20 +105,16 @@ public class SignUpServlet extends HttpServlet {
         Optional<User> userOptional = service.login(username, password);
 
         if (userOptional.isPresent()) {
-            if (userOptional.get().getUsername().equals(USERNAMEADMIN) && userOptional.get().getPassword().equals(PASSWORDADMIN)) {
-
-            } else {
-                HttpSession session = request.getSession();
-                session.setAttribute("user", userOptional.get());
-                request.setAttribute("mensaje", "El usuario " + userOptional.get().getUsername() + " ya está registrado en la base de datos");
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
-                try {
-                    dispatcher.forward(request, response);
-                } catch (ServletException e) {
-                    throw new RuntimeException(e);
-                }
-
+            HttpSession session = request.getSession();
+            session.setAttribute("user", userOptional.get());
+            request.setAttribute("mensaje", "Error, el usuario " + userOptional.get().getUsername() + " ya está registrado en la base de datos");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+            try {
+                dispatcher.forward(request, response);
+            } catch (ServletException e) {
+                throw new RuntimeException(e);
             }
+
         } else {
             request.setAttribute("mensaje", "Usuario no registrado");
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");

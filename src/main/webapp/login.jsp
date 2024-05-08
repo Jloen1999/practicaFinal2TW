@@ -1,6 +1,7 @@
+<%@ page import="es.unex.cum.tw.models.User" %>
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 
-<%
+<%--<%
     String showOffCanva = "";
     if (session.getAttribute("isSignUp") != null) {
         Boolean isSignUp = (Boolean) session.getAttribute("isSignUp");
@@ -8,33 +9,41 @@
             showOffCanva = "show";
         }
     }
-%>
+%>--%>
 
 <li class="nav-item">
-    <a class="nav-link d-lg-none d-sm-block" type="button" data-bs-toggle="offcanvas"
-       data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
-            class="bi bi-person text-white fs-4"></i>
-        <% if (session.getAttribute("user") == null) { %>
-            <% if (session.getAttribute("isSignUp") == null) { %>
-                Iniciar sesión
-            <% } else { %>
-                Registrarse
-            <% } %>
-        <% } else { %>
-            <!-- Mostrar el usuario en un elemento p con el nombre de usuario-->
-            <span class="text-success fs-6"><%= ((User) session.getAttribute("user")).getUsername() %></span>
+    <a class="nav-link d-lg-none d-block" type="button" data-bs-toggle="offcanvas"
+       data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <% if (session.getAttribute("user") == null && session.getAttribute("isSignUp") == null) { %>
+        <i class="bi bi-person text-white fs-5">Iniciar sesión</i>
+        <% } else if (session.getAttribute("user") == null && session.getAttribute("isSignUp") != null) { %>
+        <i class="bi bi-person text-white fs-4">Registrarse</i>
         <% } %>
 
     </a>
 
-    <% if (session.getAttribute("isSignUp") == null) { %>
-    <a class="nav-link d-sm-none d-lg-inline" href="#"><i
-            class="bi bi-person text-white fs-4"></i>Iniciar sesión</a>
+    <% if (session.getAttribute("user") == null) { %>
+    <a class="nav-link d-none d-lg-block" type="button" data-bs-toggle="modal"
+       data-bs-target="#staticBackdrop">
+
+        <% if (session.getAttribute("user") == null && session.getAttribute("isSignUp") == null) { %>
+        <i class="bi bi-person text-white fs-4">Iniciar sesión</i>
+        <% } else if (session.getAttribute("user") == null && session.getAttribute("isSignUp") != null) { %>
+        <i class="bi bi-person text-white fs-4">Registrarse</i>
+        <% } %>
+    </a>
     <% } else { %>
-    <a class="nav-link d-sm-none d-lg-inline" href="#"><i
-            class="bi bi-person text-white fs-4"></i>Registrarse</a>
-    <% } %>
-    <div class="offcanvas offcanvas-end <%= showOffCanva %> d-lg-none" tabindex="-1" id="offcanvasRight"
+    <!-- Mostrar el usuario en un elemento p con el nombre de usuario-->
+    <div class="d-flex"><span
+            class="text-success fs-6 text-green"><%= ((User) session.getAttribute("user")).getUsername() %></span>
+        <a class="btn btn-danger" href="${pageContext.request.contextPath}/logout">Cerrar
+            sesión</a></div>
+    <% }%>
+
+
+    <%@ include file="loginLg.jsp" %>
+
+    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasRight"
          aria-labelledby="offcanvasRightLabel">
 
         <% if (session.getAttribute("user") == null) { %>
@@ -51,55 +60,59 @@
         <div class="offcanvas-body small">
             <form class="row g-3"
 
-                  id="formulario" action="${pageContext.request.contextPath}/action"
+                  id="formulario" action="${pageContext.request.contextPath}/actionSignInUp"
                   method="post">
 
                 <% if (session.getAttribute("isSignUp") != null && (Boolean) session.getAttribute("isSignUp")) { %>
                 <div class="col-md-12">
                     <label for="name" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" value="" name="name">
+                    <input type="text" class="form-control" id="name" value="" name="name" aria-describedby="nameHelp">
                     <div class="valid-feedback">
                         Genial!
                     </div>
+                    <div id="nameHelp" class="form-text">Debe tener al menos 3 caracteres</div>
                 </div>
 
                 <div class="col-md-12">
                     <label for="lastname" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="lastname" name="lastname">
+                    <input type="text" class="form-control" id="lastname" name="lastname" aria-describedby="lastnameHelp">
                     <div class="valid-feedback">
                         Genial!
                     </div>
+                    <div id="lastnameHelp" class="form-text">Debe tener al menos 3 caracteres</div>
                 </div>
 
                 <div class="col-md-12">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" value="" name="email">
+                    <input type="email" class="form-control" id="email" value="" name="email" aria-describedby="emailHelp">
                     <div class="valid-feedback">
                         Genial!
                     </div>
+                    <div id="emailHelp" class="form-text">Debe tener al menos 3 caracteres</div>
                 </div>
                 <%}%>
 
                 <div class="col-md-12" id="campo-username">
                     <label for="username" class="form-label">Usuario</label>
-                    <input type="text" class="form-control" id="username" value="
-<%if (session.getAttribute("username") != null) {%>
-<%= (String) session.getAttribute("username") %>
-<%}%>
-"
-                           name="username" required>
+                    <input type="text" class="form-control" id="username"
+                           value="<%= session.getAttribute("username") == null ? "" : (String) session.getAttribute("username")%>"
+                           name="username" required aria-describedby="usernameHelp">
                     <div class="valid-feedback">
                         Genial!
                     </div>
+                    <div id="usernameHelp" class="form-text">Debe tener al menos 3 caracteres</div>
                 </div>
 
                 <div class="col-md-12">
                     <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" value="<%if (session.getAttribute("password") != null) {%>
-<%= (String) session.getAttribute("password") %><%}%>" name="password" required>
+                    <input type="password" class="form-control" id="password"
+                           value="<%= session.getAttribute("password") == null ? "" : (String) session.getAttribute("password")%>"
+                           name="password"
+                           required aria-describedby="passwordHelp">
                     <div class="valid-feedback">
                         Genial!
                     </div>
+                    <div id="passwordHelp" class="form-text">Debe tener al menos 6 caracteres</div>
                 </div>
                 <div class="col-12">
                     <div class="form-check">
@@ -128,11 +141,6 @@
 
             </form>
         </div>
-        <%} else {%>
-        <div class="col-12 text-center w-25 h-25">
-            <a class="btn btn-primary" href="${pageContext.request.contextPath}/logout">Cerrar
-                sesión</a>
-        </div>
         <%}%>
     </div>
 </li>
@@ -148,7 +156,7 @@
             // Iterar sobre cada input para validarlos
             inputs.forEach(function (input) {
                 // Si el input es del campo del nombre de usuario, validar que tenga al menos 3 caracteres
-                if (input.id === 'name' || input.id === 'lastname' || input.id === 'username') {
+                if (input.name === 'name' || input.name === 'lastname' || input.name === 'username') {
                     if (input.value.length < 3) {
                         // Si el campo no tiene al menos 3 caracteres, establecer el mensaje de error
                         input.setCustomValidity('El campo debe tener al menos 3 caracteres');
@@ -163,8 +171,10 @@
                 }
 
                 // Si el input es del campo del correo electrónico, validar que sea un correo electrónico válido
-                if (input.id === 'email') {
-                    if (!input.value.includes('@')) {
+                if (input.name === 'email') {
+                    const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    const matched = input.value.match(emailRegex);
+                    if (matched === null) {
                         // Si el campo no es un correo electrónico válido, establecer el mensaje de error
                         input.setCustomValidity('El correo electrónico debe ser válido');
                         input.classList.remove('is-valid');
@@ -179,7 +189,7 @@
 
 
                 // Si el input es del campo de la contraseña, validar que tenga al menos 6 caracteres
-                if (input.id === 'password') {
+                if (input.name === 'password') {
                     if (input.value.length < 6) {
                         // Si el campo no tiene al menos 6 caracteres, establecer el mensaje de error
                         input.setCustomValidity('La contraseña debe tener al menos 6 caracteres');
@@ -219,4 +229,5 @@
             });
         });
     });
+
 </script>

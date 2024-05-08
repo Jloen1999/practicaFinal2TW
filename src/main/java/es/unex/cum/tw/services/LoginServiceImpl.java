@@ -13,16 +13,7 @@ public class LoginServiceImpl implements LoginService {
         HttpSession session = request.getSession();
 
         User user = (User) session.getAttribute("user");
-        String username = (String) session.getAttribute("username");
-        String password = (String) session.getAttribute("password");
 
-        if(user == null){
-            user = new UserBuilder()
-                    .setUsername(username)
-                    .setPassword(password)
-                    .build();
-        }
-
-        return Optional.of(user);
+        return Optional.ofNullable(user);
     }
 }

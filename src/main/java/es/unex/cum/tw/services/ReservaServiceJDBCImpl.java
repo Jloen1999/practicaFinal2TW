@@ -21,9 +21,9 @@ public class ReservaServiceJDBCImpl implements ReservaService{
 
 
     @Override
-    public List<Reserva> getReservasByUserId(User user) throws SQLException {
+    public List<Reserva> getReservasByUser(User user) throws SQLException {
         try {
-            return reservaRepository.getReservasByUserId(user);
+            return reservaRepository.getReservasByUser(user);
         } catch (SQLException e) {
             throw new ServiceJdbcException(e.getMessage(), e.getCause());
         }
@@ -33,6 +33,24 @@ public class ReservaServiceJDBCImpl implements ReservaService{
     public Optional<Libro> getLibroByReservaId(int id) throws SQLException {
         try {
             return reservaRepository.getLibroByReservaId(id);
+        } catch (SQLException e) {
+            throw new ServiceJdbcException(e.getMessage(), e.getCause());
+        }
+    }
+
+    @Override
+    public boolean dropLibroFromReserva(int idLibro) throws SQLException {
+        try {
+            return reservaRepository.dropLibroFromReserva(idLibro);
+        } catch (SQLException e) {
+            throw new ServiceJdbcException(e.getMessage(), e.getCause());
+        }
+    }
+
+    @Override
+    public boolean addLibroToReserva(User user, int idLibro) throws SQLException {
+        try {
+            return reservaRepository.addLibroToReserva(user, idLibro);
         } catch (SQLException e) {
             throw new ServiceJdbcException(e.getMessage(), e.getCause());
         }

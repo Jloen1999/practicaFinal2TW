@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ReservaService {
-    List<Reserva> getReservasByUserId(User user) throws SQLException;
+    List<Reserva> getReservasByUser(User user) throws SQLException;
     Optional<Libro> getLibroByReservaId(int id) throws SQLException;
+    boolean dropLibroFromReserva(int idLibro) throws SQLException;
+    boolean addLibroToReserva(User user, int idLibro) throws SQLException;
 }
