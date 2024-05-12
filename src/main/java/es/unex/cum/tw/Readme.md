@@ -25,3 +25,13 @@
 
 [Página de inicio](http://localhost:8080/webapp-practicaFinal2)
 
+# Bibliografía
+- [Bootstrap](https://getbootstrap.com/)
+- [Documentación de la asignatura](https://campusvirtual.unex.es/zonauex/avuex/course/view.php?id=16957#section-4)
+- [ChatGPT](https://chatgpt.com/)
+
+# Github
+[Repositorio](https://github.com/Jloen1999/practicaFinal2TW)
+
+
+
