@@ -1,8 +1,6 @@
 package es.unex.cum.tw.listeners;
 
 import es.unex.cum.tw.models.Libro;
-import es.unex.cum.tw.models.User;
-import es.unex.cum.tw.models.UserBuilder;
 import es.unex.cum.tw.models.Valoracion;
 import es.unex.cum.tw.services.LibroService;
 import es.unex.cum.tw.services.LibroServiceJDBCImpl;
@@ -17,6 +15,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Aplicación Listener para inicializar la aplicación y cargar los libros desde la base de datos.
+ * También se encarga de actualizar la puntuación media de los libros y de mostrar las novedades(libros nuevos).
+ * Además, se encarga de mostrar información sobre las peticiones recibidas y las sesiones creadas y destruidas.
+ *
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:14
+ */
 @WebListener()
 public class AplicacionListener implements ServletContextListener, ServletRequestListener, HttpSessionListener {
 

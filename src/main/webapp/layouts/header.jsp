@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary border-body" data-bs-theme="dark">
         <div class="container-fluid">
             <div class="d-flex flex-column">
-                <img src="./images/logoUnex.svg" alt="Logo de la página">
+                <img src="${pageContext.request.contextPath}/images/logoUnex.svg" alt="Logo de la página">
                 <a class="navbar-brand" href="${pageContext.request.contextPath}">BiblioCum</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -21,9 +21,11 @@
                     </li>
                     <% } %>
 
-                    <%@ include file="DropdownLibrosReservados.jsp" %>
+                    <%@ include file="../DropdownLibrosReservados.jsp" %>
 
-                    <%@ include file="login.jsp" %>
+                    <%@ include file="../ahorcado.jsp" %>
+
+                    <%@ include file="../login.jsp" %>
                 </ul>
             </div>
         </div>

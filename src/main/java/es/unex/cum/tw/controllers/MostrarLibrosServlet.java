@@ -20,6 +20,16 @@ import java.util.Properties;
 
 import static es.unex.cum.tw.util.MetodosUtilizables.obtenerLibrosUsuario;
 
+/**
+ * Servlet que muestra los libros disponibles de la base de datos.
+ * <ul>
+ *     <li>Si el usuario es administrador, se le permite añadir y eliminar libros.</li>
+ *     <li>Si el usuario no es administrador, se le permite ver los libros, reservar y valorarlos.</li>
+ *     <li>Se muestra la puntuación media de cada libro.</li>
+ * </ul>
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 11:57
+ */
 @WebServlet(
         name = "MostrarLibrosServlet",
         value = "/verLibros"
@@ -48,12 +58,12 @@ public class MostrarLibrosServlet extends HttpServlet {
         resp.setContentType("text/html; charset=UTF-8");
 
         LoginService loginService = new LoginServiceImpl();
-        Optional<User> userOptional = loginService.authenticate(req);
-        if (userOptional.isPresent()) {
+        Optional<User> userOptional = loginService.authenticate(req); // Obtener usuario de la sesión
+        if (userOptional.isPresent()) { // Si el usuario está logueado
 
-            if (userOptional.get().getUsername() != null && userOptional.get().getPassword() != null) {
+            if (userOptional.get().getUsername() != null && userOptional.get().getPassword() != null) { // Si el usuario es administrador
                 if (userOptional.get().getUsername().equals(USERNAMEADMIN) && userOptional.get().getPassword().equals(PASSWORDADMIN)) {
-                    req.setAttribute("admin", true);
+                    req.setAttribute("admin", true); // Permitir añadir y eliminar libros
                 }
             }
 
@@ -62,19 +72,19 @@ public class MostrarLibrosServlet extends HttpServlet {
         Connection con = (Connection) req.getAttribute("con");
         LibroService libroService = new LibroServiceJDBCImpl(con);
         try {
-            List<Libro> libros = libroService.findAll();
-            List<Libro> booksWithPuntuacionMedia = new ArrayList<>();
+            List<Libro> libros = libroService.findAll(); // Obtener todos los libros de la base de datos
+            List<Libro> booksWithPuntuacionMedia = new ArrayList<>(); // Lista de libros con la puntuación media actualizada
             for (Libro libro : libros) {
-                List<Valoracion> valoraciones = libroService.getValoracionesByBookId(libro.getIdLibro());
+                List<Valoracion> valoraciones = libroService.getValoracionesByBookId(libro.getIdLibro()); // Obtener valoraciones de un libro en concreto
                 float puntuacion = 0;
-                for (Valoracion valoracion : valoraciones) {
+                for (Valoracion valoracion : valoraciones) { // Calcular puntuación media
                     puntuacion += valoracion.getPuntuacion();
                 }
-                if (!valoraciones.isEmpty()) {
+                if (!valoraciones.isEmpty()) { // Si hay valoraciones
                     puntuacion /= valoraciones.size();
                 }
 
-                libro.setPuntuacion(puntuacion);
+                libro.setPuntuacion(puntuacion); // Actualizar puntuación del libro en la lista
                 booksWithPuntuacionMedia.add(libro);
 
                 // Actualiza puntuacion del libro en la base de datos
@@ -82,13 +92,16 @@ public class MostrarLibrosServlet extends HttpServlet {
 
             }
 
-            if (userOptional.isPresent()) {
+            if (userOptional.isPresent()) { // Si el usuario está logueado
                 UserService userService = new UserServiceJDBCImpl(con);
                 try {
+                    // Obtener usuario de la base de datos
                     userOptional = userService.findByUsernameAndPassword(userOptional.get().getUsername(), userOptional.get().getPassword());
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
+
+                // Obtener libros del usuario
                 obtenerLibrosUsuario(con, userOptional, req.getSession());
             }
 

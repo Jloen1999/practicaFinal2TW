@@ -12,6 +12,11 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Optional;
 
+/**
+ * Servlet que se encarga de cerrar la sesión de un usuario.
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 11:51
+ */
 @WebServlet(
         name = "LogoutServlet",
         value = "/logout"
@@ -20,12 +25,13 @@ public class LogoutServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html; charset=UTF-8");
-        LoginService auth = new LoginServiceImpl();
-        Optional<User> userOptional = auth.authenticate(request);
 
-        if (userOptional.isPresent()) {
+        LoginService auth = new LoginServiceImpl();
+        Optional<User> userOptional = auth.authenticate(request); // Obtener el usuario de la sesión
+
+        if (userOptional.isPresent()) { // Si el usuario está logueado
             HttpSession session = request.getSession();
-            session.invalidate();
+            session.invalidate(); // Invalidar la sesión
         }
 
         response.sendRedirect(request.getContextPath() + "/index.jsp");

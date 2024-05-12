@@ -4,7 +4,6 @@
 
 <div class="container-md">
     <section class="row mt-3">
-        <!-- Acceder a la lista de libros desde el ServletContext -->
         <% if (application.getAttribute("books") != null) {
             List<Libro> books = (List<Libro>) application.getAttribute("books");
             for (Libro book : books) {%>
@@ -17,8 +16,6 @@
                 </h5>
                 <p class="card-text"><%=book.getDescripcion()%>
                 </p>
-                <!-- Puedes agregar un enlace para más detalles o acciones -->
-                <!-- Mostrar "Ver detalles" en el borde inferior de la tarjeta, usa display flex and justify content y align items -->
                 <div class="d-flex g-col-2"><a href="#"
                                                class="btn btn-primary position-absolute bottom-0 start-0"
                                                data-bs-toggle="modal"
@@ -41,7 +38,6 @@
                                         aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <!-- Mostrar todos los datos del libro en forma de tabla y añade la accion de reservar solo si el usuario esta logueado(comprobar session.getAttribute("user") -->
                                 <table class="table table-dark table-striped">
                                     <tbody>
                                     <tr>
@@ -66,11 +62,16 @@
                                     </tr>
                                     <tr>
                                         <th scope="row">Valoración</th>
-                                        <td><% for (int i = 0; i < (int) book.getPuntuacion(); i++) {
-                                            out.print("<i class='bi bi-star-fill text-warning'></i>");
-                                        }
+                                        <td><% out.print(book.getPuntuacion() + " ");
+                                            for (int i = 0; i < (int) (book.getPuntuacion()); i++) {
+                                                out.print("<i class='bi bi-star-fill text-warning'></i>");
+                                            }
                                             for (int i = 0; i < 5 - (int) book.getPuntuacion(); i++) {
-                                                out.print("<i class='bi bi-star'></i>");
+                                                if (book.getPuntuacion() % 1 == 0.5 && i ==  0) {
+                                                    out.print("<i class='bi bi-star-half text-warning'></i>");
+                                                } else {
+                                                    out.print("<i class='bi bi-star'></i>");
+                                                }
                                             }%>
                                         </td>
                                     </tr>

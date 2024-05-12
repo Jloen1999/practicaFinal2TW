@@ -6,6 +6,11 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Interfaz que define los métodos que debe implementar un servicio de usuario.
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:51
+ */
 public interface UserService {
     Optional<User> login(String username, String password);
     boolean save(User user) throws SQLException;

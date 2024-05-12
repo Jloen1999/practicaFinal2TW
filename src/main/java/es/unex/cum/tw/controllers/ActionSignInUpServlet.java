@@ -11,8 +11,8 @@ import java.io.IOException;
 
 /**
  * Servlet que gestiona las acciones de inicio de sesión y registro de usuario
- * @author Jose Luis Obiang ELa Nanguang
- * @version 1.0, 6/05/2024
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:34
  * @see jakarta.servlet.http.HttpServlet
  * @see jakarta.servlet.annotation.WebServlet
  * @see java.io.IOException

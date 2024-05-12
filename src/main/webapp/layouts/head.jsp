@@ -9,10 +9,10 @@
     <meta charset="UTF-8">
 
     <!-- Enlace a la hoja de estilos propios -->
-    <link rel="stylesheet" href="./css/estilosAhorcado.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilosAhorcado.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./images/UNEX.png">
+    <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/images/UNEX.png">
     
     <!-- Bootstrap CSS -->
     <link

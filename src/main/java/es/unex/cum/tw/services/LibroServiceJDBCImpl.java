@@ -10,6 +10,11 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Servicio de la entidad Libro que implementa los métodos que se van a utilizar en la aplicación
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:48
+ */
 public class LibroServiceJDBCImpl implements LibroService{
 
     private LibroRepository libroRepository;

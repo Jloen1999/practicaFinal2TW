@@ -1,7 +1,6 @@
 package es.unex.cum.tw.services;
 
 import es.unex.cum.tw.models.User;
-import es.unex.cum.tw.repositories.Repository;
 import es.unex.cum.tw.repositories.UserRepository;
 import es.unex.cum.tw.repositories.UserRepositoryJDBCImpl;
 
@@ -10,6 +9,11 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Servicio que implementa la interfaz UserService y que se encarga de gestionar los usuarios en la base de datos.
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:52
+ */
 public class UserServiceJDBCImpl implements UserService{
 
     private UserRepository userRepository;

@@ -11,6 +11,11 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Clase que implementa los métodos de la interfaz ReservaService
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:50
+ */
 public class ReservaServiceJDBCImpl implements ReservaService{
 
     private ReservaRepository reservaRepository;

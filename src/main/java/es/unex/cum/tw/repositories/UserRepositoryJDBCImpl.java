@@ -11,6 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementación de la interfaz UserRepository para el CRUD de usuarios en una base de datos
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:42
+ */
 public class UserRepositoryJDBCImpl implements UserRepository {
 
     private Connection conn;
@@ -20,6 +25,16 @@ public class UserRepositoryJDBCImpl implements UserRepository {
     }
 
 
+    /**
+     * Busca un usuario por su nombre de usuario y contraseña
+     * @param username nombre de usuario
+     * @param password contraseña
+     * @return
+     * <ul>
+     *     <li>Optional.empty() si no se encuentra el usuario</li>
+     *     <li>Optional.of(User) si se encuentra el usuario</li>
+     * </ul>
+     */
     @Override
     public Optional<User> findByUsernameAndPassword(String username, String password) throws SQLException {
         User user = null;
@@ -42,6 +57,15 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         return Optional.ofNullable(user);
     }
 
+    /**
+     * Busca un usuario por su nombre de usuario
+     * @param idUsuario id del usuario
+     * @return
+     * <ul>
+     *     <li>Optional.empty() si no se encuentra el usuario</li>
+     *     <li>Optional.of(User) si se encuentra el usuario</li>
+     * </ul>
+     */
     @Override
     public Optional<User> findById(int idUsuario) throws SQLException {
         User user = null;
@@ -63,8 +87,10 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         return Optional.ofNullable(user);
     }
 
-
-
+    /**
+     * Devuelve una lista con todos los usuarios
+     * @return List<User> lista de usuarios
+     */
     @Override
     public List<User> findAll() throws SQLException {
         List<User> users = new ArrayList<>();
@@ -85,6 +111,15 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         return users;
     }
 
+    /**
+     * Guarda un usuario en la base de datos
+     * @param user usuario a guardar
+     * @return
+     * <ul>
+     *     <li>true si se ha guardado correctamente</li>
+     *     <li>false si ha habido algún error</li>
+     * </ul>
+     */
     @Override
     public boolean save(User user) throws SQLException {
         try (PreparedStatement statement = conn.prepareStatement(
@@ -98,6 +133,15 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         }
     }
 
+    /**
+     * Actualiza un usuario en la base de datos
+     * @param user usuario a actualizar
+     * @return
+     * <ul>
+     *     <li>true si se ha actualizado correctamente</li>
+     *     <li>false si ha habido algún error</li>
+     * </ul>
+     */
     @Override
     public boolean update(User user) throws SQLException {
         try (PreparedStatement statement = conn.prepareStatement(
@@ -112,6 +156,15 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         }
     }
 
+    /**
+     * Elimina un usuario de la base de datos
+     * @param idUsuario id del usuario a eliminar
+     * @return
+     * <ul>
+     *     <li>true si se ha eliminado correctamente</li>
+     *     <li>false si ha habido algún error</li>
+     * </ul>
+     */
     @Override
     public boolean deleteById(int idUsuario) throws SQLException {
         // Primero eliminar el usuario en las tablas en las que tiene relacion
@@ -124,6 +177,10 @@ public class UserRepositoryJDBCImpl implements UserRepository {
 
     }
 
+    /**
+     * Elimina las valoraciones de un usuario
+     * @param idUsuario id del usuario
+     */
     private void eliminarValoracionesUsuario(int idUsuario) {
         try (PreparedStatement statement = conn.prepareStatement("DELETE FROM valoraciones WHERE idUsuario = ?")) {
             statement.setLong(1, idUsuario);
@@ -133,6 +190,10 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         }
     }
 
+    /**
+     * Elimina las reservas de un usuario
+     * @param idUsuario id del usuario
+     */
     private void eliminarReservasUsuario(int idUsuario) {
         try (PreparedStatement statement = conn.prepareStatement("DELETE FROM reservas WHERE idUsuario = ?")) {
             statement.setLong(1, idUsuario);
@@ -142,6 +203,15 @@ public class UserRepositoryJDBCImpl implements UserRepository {
         }
     }
 
+    /**
+     * Elimina un usuario de la base de datos
+     * @param user usuario a eliminar
+     * @return
+     * <ul>
+     *     <li>true si se ha eliminado correctamente</li>
+     *     <li>false si ha habido algún error</li>
+     * </ul>
+     */
     @Override
     public boolean delete(User user) throws SQLException {
         return deleteById(user.getId());

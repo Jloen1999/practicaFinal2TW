@@ -20,29 +20,7 @@ import java.util.Optional;
 /**
  * Servlet que gestiona la eliminación y reserva de libros.
  * @author Jose Luis Obiang Ela Nanguang
- * @version 1.0 06/05/2024
- * @see jakarta.servlet.http.HttpServlet
- * @see jakarta.servlet.http.HttpServletRequest
- * @see jakarta.servlet.http.HttpServletResponse
- * @see jakarta.servlet.annotation.WebServlet
- * @see java.io.IOException
- * @see java.sql.Connection
- * @see java.sql.SQLException
- * @see java.util.ArrayList
- * @see java.util.Enumeration
- * @see java.util.List
- * @see java.util.Optional
- * @see es.unex.cum.tw.models.Libro
- * @see es.unex.cum.tw.models.User
- * @see es.unex.cum.tw.services.LibroService
- * @see es.unex.cum.tw.services.LibroServiceJDBCImpl
- * @see es.unex.cum.tw.services.LoginService
- * @see es.unex.cum.tw.services.LoginServiceImpl
- * @see es.unex.cum.tw.services.ReservaService
- * @see es.unex.cum.tw.services.ReservaServiceJDBCImpl
- * @see es.unex.cum.tw.services.UserService
- * @see es.unex.cum.tw.services.UserServiceJDBCImpl
- * @see jakarta.servlet.ServletException
+ * @version 1.0 12-05-2024, Sun, 12:36
  *
  */
 @WebServlet(name = "EliminarReservarLibroServlet", value = "/validarEliminarReservarLibro")

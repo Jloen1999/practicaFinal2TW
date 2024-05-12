@@ -29,7 +29,7 @@ async function cargarDiccionario() {
         }
         const data = await response.json();
         palabras = data.map(item => item.word.toUpperCase()); // Actualiza el array de palabras con los datos recibidos y convierte a mayúsculas
-        console.log('Palabras cargadas desde la API: ', palabras);
+        // console.log('Palabras cargadas desde la API: ', palabras);
 
     } catch (error) {
         // En caso de error al cargar desde la API, carga desde un archivo JSON de respaldo
@@ -42,7 +42,7 @@ async function cargarDiccionario() {
             const data = await response.json();
             palabras = data; // Actualiza el array de palabras con los datos recibidos y convierte a mayúsculas
             palabras = Array.from(palabras).map(palabra => palabra.toUpperCase());
-            console.log('Palabras cargadas desde el archivo JSON de respaldo: ', palabras);
+            // console.log('Palabras cargadas desde el archivo JSON de respaldo: ', palabras);
         } catch (error) {
             // En caso de error al cargar desde el archivo JSON de respaldo, utiliza un conjunto de palabras predeterminadas
             console.error('Error al cargar las palabras desde el archivo JSON de respaldo', error.message);

@@ -1,5 +1,6 @@
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 
+<!-- Activar este modal siempre solo para dispositivos grandes -->
 <div class="modal fade text-white" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -23,6 +24,7 @@
                         <div class="valid-feedback">
                             Genial!
                         </div>
+                        <div id="nameHelp" class="form-text">Debe tener al menos 3 caracteres</div>
                     </div>
 
                     <div class="col-md-12">
@@ -31,6 +33,7 @@
                         <div class="valid-feedback">
                             Genial!
                         </div>
+                        <div id="lastnameHelp" class="form-text">Debe tener al menos 3 caracteres</div>
                     </div>
 
                     <div class="col-md-12">
@@ -39,6 +42,7 @@
                         <div class="valid-feedback">
                             Genial!
                         </div>
+                        <div id="emailHelp" class="form-text">Debe tener al menos 3 caracteres</div>
                     </div>
                     <%}%>
 
@@ -49,6 +53,7 @@
                         <div class="valid-feedback">
                             Genial!
                         </div>
+                        <div id="usernameHelp" class="form-text">Debe tener al menos 3 caracteres</div>
                     </div>
 
                     <div class="col-md-12">

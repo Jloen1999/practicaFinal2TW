@@ -11,6 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Implementación de la interfaz ReservaRepository para las operaciones CRUD de la entidad Reserva
+ *
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:37
+ */
 public class ReservaRepositoryJDBCImpl implements ReservaRepository {
 
     private final Connection conn;
@@ -19,7 +25,12 @@ public class ReservaRepositoryJDBCImpl implements ReservaRepository {
         this.conn = conn;
     }
 
-
+    /**
+     * Método que obtiene todas las reservas de un usuario
+     *
+     * @param user Usuario del que se quieren obtener las reservas
+     * @return Lista de reservas del usuario
+     */
     @Override
     public List<Reserva> getReservasByUser(User user) throws SQLException {
         List<Reserva> reservas = new ArrayList<>();
@@ -47,13 +58,22 @@ public class ReservaRepositoryJDBCImpl implements ReservaRepository {
         return reservas;
     }
 
-
+    /**
+     * Método que obtiene un libro a partir de su id de reserva
+     *
+     * @param id Id de la reserva
+     * @return Libro asociado a la reserva
+     * <ul>
+     *     <li>Si el libro existe, se devuelve un Optional con el libro</li>
+     *     <li>Si el libro no existe, se devuelve un Optional vacío</li>
+     * </ul>
+     */
     @Override
     public Optional<Libro> getLibroByReservaId(int id) throws SQLException {
         Libro libro = null;
 
         String query = "SELECT * FROM libros WHERE idLibro = ?";
-        try(PreparedStatement ps = conn.prepareStatement(query)) {
+        try (PreparedStatement ps = conn.prepareStatement(query)) {
             ps.setInt(1, id);
 
             ResultSet rs = ps.executeQuery();
@@ -78,50 +98,71 @@ public class ReservaRepositoryJDBCImpl implements ReservaRepository {
                         .setNovedad(novedad)
                         .build();
             }
-        }catch(SQLException e){
+        } catch (SQLException e) {
             throw new ServiceJdbcException(e.getMessage(), e.getCause());
         }
 
         return Optional.ofNullable(libro);
     }
 
+    /**
+     * Método que elimina un libro de la tabla de reservas a partir de su id
+     *
+     * @param idLibro Id del libro a eliminar de la tabla de reservas
+     * @return <ul>
+     *     <li>Si el libro se elimina correctamente, se devuelve true</li>
+     *     <li>Si el libro no se elimina correctamente, se devuelve false</li>
+     *     <li>Si se produce una excepción, se lanza una excepción de tipo SQLException</li>
+     * </ul>
+     */
     @Override
     public boolean dropLibroFromReserva(int idLibro) throws SQLException {
         String query = "DELETE FROM reservas WHERE idLibro = ?";
-        try(PreparedStatement ps = conn.prepareStatement(query)){
+        try (PreparedStatement ps = conn.prepareStatement(query)) {
             ps.setInt(1, idLibro);
             return ps.executeUpdate() > 0;
-        }catch(SQLException e){
+        } catch (SQLException e) {
             throw new ServiceJdbcException(e.getMessage(), e.getCause());
         }
     }
 
+    /**
+     * Método que añade un libro a la tabla de reservas
+     *
+     * @param user    Usuario que realiza la reserva
+     * @param idLibro Id del libro a reservar
+     * @return <ul>
+     *     <li>Si el libro se añade correctamente a la tabla de reservas, se devuelve true</li>
+     *     <li>Si el libro ya ha sido reservado por el usuario, se devuelve false</li>
+     *     <li>Si se produce una excepción, se lanza una excepción de tipo SQLException</li>
+     * </ul>
+     */
     @Override
     public boolean addLibroToReserva(User user, int idLibro) throws SQLException {
         // Primero comprobar si el libro ya ha sido reservado por el usuario
         boolean reservado = false, insertado = false;
         String queryCheck = "SELECT * FROM reservas WHERE idUsuario = ? AND idLibro = ?";
-        try(PreparedStatement ps = conn.prepareStatement(queryCheck)){
+        try (PreparedStatement ps = conn.prepareStatement(queryCheck)) {
             ps.setInt(1, user.getId());
             ps.setInt(2, idLibro);
 
             ResultSet rs = ps.executeQuery();
-            if(rs.next()){
+            if (rs.next()) {
                 reservado = true;
             }
-        }catch(SQLException e){
+        } catch (SQLException e) {
             throw new ServiceJdbcException("Error al comprobar si el libro ya ha sido reservado", e.getCause());
         }
 
         if (!reservado) {
             String query = "INSERT INTO reservas (idUsuario, idLibro, fechaReserva) VALUES (?, ?, ?)";
-            try(PreparedStatement ps = conn.prepareStatement(query)){
+            try (PreparedStatement ps = conn.prepareStatement(query)) {
                 ps.setInt(1, user.getId());
                 ps.setInt(2, idLibro);
                 ps.setTimestamp(3, new Timestamp(System.currentTimeMillis()));
 
                 insertado = ps.executeUpdate() > 0;
-            }catch(SQLException e){
+            } catch (SQLException e) {
                 throw new ServiceJdbcException("Este libro ya ha sido reservado por tí", e.getCause());
             }
         }
@@ -129,6 +170,16 @@ public class ReservaRepositoryJDBCImpl implements ReservaRepository {
         return insertado;
     }
 
+    /**
+     * Método que obtiene la reserva de un libro por su id
+     *
+     * @param id Id de la reserva
+     * @return <ul>
+     *     <li>Si la reserva existe, se devuelve un Optional con la reserva</li>
+     *     <li>Si la reserva no existe, se devuelve un Optional vacío</li>
+     *     <li>Si se produce una excepción, se lanza una excepción de tipo SQLException</li>
+     * </ul>
+     */
     @Override
     public Optional<Reserva> findById(int id) throws SQLException {
         return Optional.empty();

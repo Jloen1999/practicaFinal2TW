@@ -13,6 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Interfaz que contiene métodos útiles para la aplicación.
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:53
+ */
 public interface MetodosUtilizables {
     static void obtenerLibrosUsuario(Connection conn, Optional<User> userOptional, HttpSession session) {
         ReservaService serviceReserva = null;

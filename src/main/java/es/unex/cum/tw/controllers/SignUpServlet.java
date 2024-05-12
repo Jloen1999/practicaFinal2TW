@@ -17,6 +17,14 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Optional;
 
+
+/**
+ * Servlet que se encarga de registrar a un usuario en la base de datos.
+ * <ul>
+ *     <li>Si el usuario no está registrado, se registra en la base de datos.</li>
+ *     <li>Si el usuario ya está registrado, se muestra un mensaje de error.</li>
+ * </ul>
+ */
 @WebServlet(
         name = "RegistroServlet",
         value = "/registro"
@@ -37,29 +45,27 @@ public class SignUpServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html; charset=UTF-8");
 
+        // Obtenemos los parámetros del formulario
         username = request.getParameter("username");
         password = request.getParameter("password");
 
         Connection conn = (Connection) request.getAttribute("con");
         UserService service = new UserServiceJDBCImpl(conn);
-        Optional<User> userOptional = service.login(username, password);
+        Optional<User> userOptional = service.login(username, password); // Comprobamos si el usuario ya está registrado
 
         HttpSession session = request.getSession();
         if (userOptional.isEmpty()) { // Si el usuario no está registrado
+            // Obtenemos los parámetros del formulario para registrar al usuario
             String name = request.getParameter("name");
             String lastname = request.getParameter("lastname");
             String email = request.getParameter("email");
 
             if (name == null || name.isBlank() || lastname == null || lastname.isBlank() || email == null || email.isBlank()) {
                 request.setAttribute("mensaje", "Debes rellenar todos los campos");
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ahorcado.html");
-                try {
-                    dispatcher.forward(request, response);
-                } catch (ServletException e) {
-                    throw new RuntimeException(e);
-                }
             }
+
             UserService userService = new UserServiceJDBCImpl(conn);
+            // Creamos el usuario
             User user = new UserBuilder()
                     .setUsername(username)
                     .setPassword(password)
@@ -69,6 +75,7 @@ public class SignUpServlet extends HttpServlet {
                     .build();
 
             try {
+                // Guardamos el usuario en la base de datos
                 if (!userService.save(user)) {
                     request.setAttribute("mensaje", "Error al registrar el usuario");
                 }else{
@@ -108,22 +115,17 @@ public class SignUpServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("user", userOptional.get());
             request.setAttribute("mensaje", "Error, el usuario " + userOptional.get().getUsername() + " ya está registrado en la base de datos");
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
-            try {
-                dispatcher.forward(request, response);
-            } catch (ServletException e) {
-                throw new RuntimeException(e);
-            }
+
 
         } else {
             request.setAttribute("mensaje", "Usuario no registrado");
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
-            try {
-                dispatcher.forward(request, response);
-            } catch (ServletException e) {
-                throw new RuntimeException(e);
-            }
+        }
 
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
         }
 
     }

@@ -19,7 +19,7 @@ import java.util.Properties;
  * Servlet que se encarga de mostrar la lista de usuarios registrados en la base de datos.
  * Solo puede ser accedido por el administrador.
  * @author Jose Luis Obiang Ela Nanguang
- * @version 1.0 06/05/2024
+ * @version 1.0 12-05-2024, Sun, 12:34
  * @see jakarta.servlet.http.HttpServlet
  * @see jakarta.servlet.annotation.WebServlet
  * @see java.io.IOException

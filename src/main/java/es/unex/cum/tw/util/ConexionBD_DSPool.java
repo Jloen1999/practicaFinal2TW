@@ -7,6 +7,11 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * Clase que gestiona la conexión a la base de datos mediante un DataSource
+ * @author Jose Luis Obiang Ela Nanguang
+ * @version 1.0 12-05-2024, Sun, 12:53
+ */
 public class ConexionBD_DSPool {
 
     public static Connection getConexionBD() throws SQLException {

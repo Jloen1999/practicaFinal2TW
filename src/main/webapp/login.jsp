@@ -1,43 +1,34 @@
 <%@ page import="es.unex.cum.tw.models.User" %>
 <%@ page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 
-<%--<%
-    String showOffCanva = "";
-    if (session.getAttribute("isSignUp") != null) {
-        Boolean isSignUp = (Boolean) session.getAttribute("isSignUp");
-        if (isSignUp) {
-            showOffCanva = "show";
-        }
-    }
-%>--%>
-
 <li class="nav-item">
     <a class="nav-link d-lg-none d-block" type="button" data-bs-toggle="offcanvas"
-       data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-        <% if (session.getAttribute("user") == null && session.getAttribute("isSignUp") == null) { %>
-        <i class="bi bi-person text-white fs-5">Iniciar sesión</i>
-        <% } else if (session.getAttribute("user") == null && session.getAttribute("isSignUp") != null) { %>
-        <i class="bi bi-person text-white fs-4">Registrarse</i>
+       data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <!-- Botón para abrir el offcanvas / ventana lateral -->
+        <% if (session.getAttribute("user") == null && session.getAttribute("isSignUp") == null) { %> <!-- Si el usuario no está logueado y no está en el formulario de registro -->
+        <i class="bi bi-person text-white fs-5">Iniciar sesión</i> <!-- Mostrar el icono de iniciar sesión -->
+        <% } else if (session.getAttribute("user") == null && session.getAttribute("isSignUp") != null) { %> <!-- Si el usuario no está logueado y está en el formulario de registro -->
+        <i class="bi bi-person text-white fs-4">Registrarse</i> <!-- Mostrar el icono de registrarse -->
         <% } %>
 
     </a>
 
-    <% if (session.getAttribute("user") == null) { %>
+    <!-- Para dispositivos grandes -->
+    <% if (session.getAttribute("user") == null) { %> <!-- Si el usuario no está logueado -->
     <a class="nav-link d-none d-lg-block" type="button" data-bs-toggle="modal"
-       data-bs-target="#staticBackdrop">
+       data-bs-target="#staticBackdrop"> <!-- Mostrar el modal / ventana central -->
 
-        <% if (session.getAttribute("user") == null && session.getAttribute("isSignUp") == null) { %>
-        <i class="bi bi-person text-white fs-4">Iniciar sesión</i>
-        <% } else if (session.getAttribute("user") == null && session.getAttribute("isSignUp") != null) { %>
-        <i class="bi bi-person text-white fs-4">Registrarse</i>
+        <% if (session.getAttribute("user") == null && session.getAttribute("isSignUp") == null) { %> <!-- Si el usuario no está logueado y no está en el formulario de registro -->
+        <i class="bi bi-person text-white fs-4">Iniciar sesión</i> <!-- Mostrar el icono de iniciar sesión -->
+        <% } else if (session.getAttribute("user") == null && session.getAttribute("isSignUp") != null) { %> <!-- Si el usuario no está logueado y está en el formulario de registro -->
+        <i class="bi bi-person text-white fs-4">Registrarse</i> <!-- Mostrar el icono de registrarse -->
         <% } %>
     </a>
     <% } else { %>
-    <!-- Mostrar el usuario en un elemento p con el nombre de usuario-->
-    <div class="d-flex"><span
-            class="text-success fs-6 text-green"><%= ((User) session.getAttribute("user")).getUsername() %></span>
-        <a class="btn btn-danger" href="${pageContext.request.contextPath}/logout">Cerrar
-            sesión</a></div>
+
+    <div class="d-flex">
+        <span class="text-success fs-6 text-green"><%= ((User) session.getAttribute("user")).getUsername() %></span> <!-- Mostrar el nombre de usuario -->
+        <a class="btn btn-danger" href="${pageContext.request.contextPath}/logout">Cerrar sesión</a>
+    </div>
     <% }%>
 
 
@@ -46,12 +37,12 @@
     <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasRight"
          aria-labelledby="offcanvasRightLabel">
 
-        <% if (session.getAttribute("user") == null) { %>
+        <% if (session.getAttribute("user") == null) { %> <!-- Si el usuario no está logueado -->
         <div class="offcanvas-header">
-            <% if (session.getAttribute("isSignUp") == null) { %>
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Inicio de sesión</h5>
+            <% if (session.getAttribute("isSignUp") == null) { %> <!-- Si el usuario no está logueado y no está en el formulario de registro -->
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Inicio de sesión</h5> <!-- Mostrar el título de inicio de sesión -->
             <% } else { %>
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Registro</h5>
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Registro</h5> <!-- Mostrar el título de registro -->
             <% } %>
             <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
@@ -63,7 +54,8 @@
                   id="formulario" action="${pageContext.request.contextPath}/actionSignInUp"
                   method="post">
 
-                <% if (session.getAttribute("isSignUp") != null && (Boolean) session.getAttribute("isSignUp")) { %>
+                <% if (session.getAttribute("isSignUp") != null && (Boolean) session.getAttribute("isSignUp")) { %> <!-- Si el usuario no está logueado y está en el formulario de registro -->
+                <!-- Mostrar los campos de nombre, apellidos y correo electrónico ya que estamos registrando el usuario-->
                 <div class="col-md-12">
                     <label for="name" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="name" value="" name="name" aria-describedby="nameHelp">
@@ -92,6 +84,7 @@
                 </div>
                 <%}%>
 
+                <!-- Mostrar el campo de nombre de usuario y contraseña tanto en inicio de sesión como en registro -->
                 <div class="col-md-12" id="campo-username">
                     <label for="username" class="form-label">Usuario</label>
                     <input type="text" class="form-control" id="username"
@@ -126,13 +119,15 @@
                     </div>
                 </div>
 
-                <% if (session.getAttribute("isSignUp") == null) { %>
+                <% if (session.getAttribute("isSignUp") == null) { %> <!-- Si no estamos en el formulario de registro -->
                 <div class="col-6">
                     <button class="btn btn-primary" type="submit" value="login" name="accion" id="login">Iniciar
                         sesión
                     </button>
                 </div>
                 <%}%>
+
+                <!-- Mostrar el botón de registrarse tanto si estamos en el formulario de registro como si no -->
                 <div class="col-6">
                     <button class="btn btn-primary" type="submit" value="signup" name="accion" id="registrarse">
                         Registrarse

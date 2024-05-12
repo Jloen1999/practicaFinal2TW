@@ -16,7 +16,7 @@ import java.sql.Connection;
 /**
  * Servlet que se encarga de crear un usuario en la base de datos
  * @author Jose Luis Obiang Ela Nanguang
- * @version 1.0 06/05/2024
+ * @version 1.0 12-05-2024, Sun, 12:35
  * @see jakarta.servlet.http.HttpServlet
  * @see jakarta.servlet.annotation.WebServlet
  * @see jakarta.servlet.http.HttpServletRequest

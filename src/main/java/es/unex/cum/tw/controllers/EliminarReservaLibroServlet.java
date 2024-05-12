@@ -18,8 +18,7 @@ import static es.unex.cum.tw.util.MetodosUtilizables.obtenerLibrosUsuario;
 /**
  * Servlet que elimina un libro reservado por un usuario
  * @author Jose Luis Obiang Ela Nanguang
- * @version 1.0 06/05/2024
- *
+ * @version 1.0 12-05-2024, Sun, 12:35
  */
 @WebServlet(
         name = "eliminarReservaLibroServlet",

@@ -2,10 +2,10 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<%@ include file="head.jsp"%>
+<%@ include file="./layouts/head.jsp"%>
 
 <body class="h-100">
-<%@ include file="header.jsp"%>
+<%@ include file="./layouts/header.jsp"%>
 
 <main class="h-100">
     <div class="container-md my-5">
@@ -13,6 +13,7 @@
               action="${pageContext.request.contextPath}/crearUsuario"
               method="post">
 
+            <!-- Campos del formulario para crear un usuario -->
             <div class="col-md-6 col-lg-4">
                 <label for="name" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
@@ -72,10 +73,12 @@
                 </div>
             </div>
 
+            <!-- Botón para crear usuarios -->
             <div class="col-6 d-flex justify-content-start">
                 <button class="btn btn-primary" type="submit">Crear Usuario</button>
             </div>
 
+            <!-- Botón para eliminar usuarios -->
             <div class="col-6 d-flex justify-content-end">
                 <a class="btn btn-primary" type="button" href="${pageContext.request.contextPath}/admin">Eliminar
                     Usuarios</a>
@@ -84,8 +87,8 @@
     </div>
 </main>
 
-<%@ include file="footer.jsp"%>
-<%@ include file="scriptsJS.jsp"%>
+<%@ include file="./layouts/footer.jsp"%>
+<%@ include file="js/scriptsJS.jsp"%>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('formulario');

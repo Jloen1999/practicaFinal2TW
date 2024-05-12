@@ -4,14 +4,14 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<%@ include file="head.jsp" %>
+<%@ include file="./layouts/head.jsp" %>
 
 <body>
-<%@ include file="header.jsp" %>
-<!-- Mostrar todos los libros reservados del usuario en una tabla -->
+<%@ include file="./layouts/header.jsp" %>
 <form action="${pageContext.request.contextPath}/eliminarUsuario" method="get">
     <a href="${pageContext.request.contextPath}/CrearUsuario.jsp" class="btn btn-primary d-flex justify-content-center align-items-center mt-3">Añadir Usuarios</a>
 
+    <!-- Tabla de usuarios -->
     <table class="table table-hover table-dark table-striped my-3">
         <thead>
         <tr>
@@ -23,9 +23,9 @@
         </tr>
         </thead>
         <tbody>
-        <% List<User> users = (List<User>) session.getAttribute("users"); %>
-        <% for (User user : users) { %>
-        <tr>
+        <% List<User> users = (List<User>) session.getAttribute("users"); %> <!-- Recuperamos la lista de usuarios -->
+        <% for (User user : users) { %> <!-- Iteramos sobre la lista de usuarios -->
+        <tr> <!-- Mostramos los datos de cada usuario -->
             <td class="table-active"><%= user.getNombre() %>
             </td>
             <td><%= user.getApellidos() %>
@@ -35,8 +35,8 @@
             <td><%= user.getUsername() %>
             </td>
             <td>
-                <label for="delUser" class="visually-hidden"></label>
-                <input type="checkbox" id="delUser" name="eliminarUsuarios" value="<%=user.getId()%>">
+                <label for="delUser" class="visually-hidden"></label> <!-- Creamos un checkbox para eliminar usuarios -->
+                <input type="checkbox" id="delUser" name="eliminarUsuarios" value="<%=user.getId()%>"> <!-- Pasamos el id del usuario a eliminar -->
             </td>
 
         </tr>
@@ -48,7 +48,7 @@
 
 </form>
 
-<%@ include file="footer.jsp" %>
-<%@ include file="scriptsJS.jsp" %>
+<%@ include file="./layouts/footer.jsp" %>
+<%@ include file="js/scriptsJS.jsp" %>
 </body>
 </html>

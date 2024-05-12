@@ -16,7 +16,7 @@ import java.sql.Connection;
 /**
  * Clase EliminarLibros que extiende de HttpServlet e implementa un servlet que se encarga de eliminar los libros seleccionados por el usuario.
  * @author Jose Luis Obiang Ela Nanguang
- * @version 1.0 06/05/2024
+ * @version 1.0 12-05-2024, Sun, 12:35
  * @since 1.0
  * @see jakarta.servlet.http.HttpServlet
  * @see jakarta.servlet.annotation.WebServlet
@@ -36,12 +36,12 @@ import java.sql.Connection;
 public class EliminarLibros extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html; charset=UTF-8");
 
         // Comprobamos si se han seleccionado libros a eliminar
         if(req.getParameterValues("librosAEliminar") != null && req.getParameterValues("librosAEliminar").length != 0) {
-            // Obtenemos los libros a eliminar a partir de los checkbox seleccionados, los cuales tienen como valor el id del libro
+            // Obtenemos los libros a eliminar a partir de los checkbox seleccionados, los cuales tienen como valor del ID del libro
             String[] librosAEliminar = req.getParameterValues("librosAEliminar");
             StringBuilder librosEliminados = new StringBuilder("["); // String para almacenar los libros eliminados y asi poder mostrarlos en el mensaje de confirmación
             for (String libro : librosAEliminar) { // Recorremos los id de los libros a eliminar
