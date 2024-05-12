@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="twBD">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.52">
-    <root id="1">
-      <DefaultCasing>lower/lower</DefaultCasing>
-      <DefaultEngine>InnoDB</DefaultEngine>
-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>cartabd|schema||tw|localhost|ALTER|G
-cartabd|schema||tw|localhost|ALTER ROUTINE|G
-cartabd|schema||tw|localhost|CREATE|G
-cartabd|schema||tw|localhost|CREATE ROUTINE|G
-cartabd|schema||tw|localhost|CREATE TEMPORARY TABLES|G
-cartabd|schema||tw|localhost|CREATE VIEW|G
-cartabd|schema||tw|localhost|DELETE|G
-cartabd|schema||tw|localhost|DROP|G
-cartabd|schema||tw|localhost|EVENT|G
-cartabd|schema||tw|localhost|EXECUTE|G
-cartabd|schema||tw|localhost|INDEX|G
-cartabd|schema||tw|localhost|INSERT|G
-cartabd|schema||tw|localhost|LOCK TABLES|G
-cartabd|schema||tw|localhost|REFERENCES|G
-cartabd|schema||tw|localhost|SELECT|G
-cartabd|schema||tw|localhost|SHOW VIEW|G
-cartabd|schema||tw|localhost|TRIGGER|G
-cartabd|schema||tw|localhost|UPDATE|G
-tw|schema||tw|localhost|ALTER|G
-tw|schema||tw|localhost|ALTER ROUTINE|G
-tw|schema||tw|localhost|CREATE|G
-tw|schema||tw|localhost|CREATE ROUTINE|G
-tw|schema||tw|localhost|CREATE TEMPORARY TABLES|G
-tw|schema||tw|localhost|CREATE VIEW|G
-tw|schema||tw|localhost|DELETE|G
-tw|schema||tw|localhost|DROP|G
-tw|schema||tw|localhost|EVENT|G
-tw|schema||tw|localhost|EXECUTE|G
-tw|schema||tw|localhost|INDEX|G
-tw|schema||tw|localhost|INSERT|G
-tw|schema||tw|localhost|LOCK TABLES|G
-tw|schema||tw|localhost|REFERENCES|G
-tw|schema||tw|localhost|SELECT|G
-tw|schema||tw|localhost|SHOW VIEW|G
-tw|schema||tw|localhost|TRIGGER|G
-tw|schema||tw|localhost|UPDATE|G</Grants>
-      <ServerVersion>8.0.36</ServerVersion>
-    </root>
+    <root id="1"/>
     <collation id="2" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
       <DefaultForCharset>1</DefaultForCharset>
