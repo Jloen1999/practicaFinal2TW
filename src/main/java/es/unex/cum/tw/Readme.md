@@ -20,3 +20,8 @@
   - Si se desea cambiar las credenciales, se debe modificar el fichero `src/main/resources/config.properties` y poner las credenciales deseadas siempre y cuando dichas credenciales existan en la base de datos.
 - Modelo relacional de la base de datos:
   ![img.png](../../../../../webapp/images/modeloRelacional.png)
+
+# Despliegue  
+
+[Página de inicio](http://localhost:8080/webapp-practicaFinal2)
+
