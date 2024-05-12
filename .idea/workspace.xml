@@ -5,73 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3553e393-b228-4a5d-825c-f11c31174ce0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ahorcado.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/scriptsJS.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/modeloRelacional.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ActionSignInUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ActionSignInUpServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/AnadirLibroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/AnadirLibroServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/CrearUsuarioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/CrearUsuarioServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarLibros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarReservaLibroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarReservaLibroServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarReservarLibroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarReservarLibroServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarUsuarioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/EliminarUsuarioServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/FiltroLibroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/FiltroLibroServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/MostrarLibrosReservadosServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/MostrarLibrosReservadosServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/MostrarLibrosServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/MostrarLibrosServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ReservarLibroServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/ReservarLibroServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/controllers/SignUpServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/filters/ConexionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/filters/ConexionFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/listeners/AplicacionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/listeners/AplicacionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/LibroRepositoryJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/ReservaRepositoryJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepositoryJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/repositories/UserRepositoryJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LibroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LibroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LibroServiceJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LibroServiceJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/RegistrationValidatorPerson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaServiceJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ReservaServiceJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ServiceJdbcException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/ServiceJdbcException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserServiceJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/services/UserServiceJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/util/ConexionBD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/util/ConexionBD_DSPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/util/ConexionBD_DSPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/util/MetodosUtilizables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/util/MetodosUtilizables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Ahorcardo.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/AnadirLibro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/AnadirLibro.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/CrearUsuario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/CrearUsuario.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/DropdownLibrosReservados.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/DropdownLibrosReservados.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/LibrosNovedadCarousel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layouts/LibrosNovedadCarousel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ahorcado.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layouts/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/head.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layouts/head.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layouts/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/scriptAhorcado.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/scriptAhorcado.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/librosCard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layouts/librosCard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginLg.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginLg.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mostrarLibros.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mostrarLibros.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/mostrarLibrosReservados.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/mostrarLibrosReservados.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/obtenerLibroGoogleBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/obtenerLibroGoogleBooks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/prueba.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/scriptsJS.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/unex/cum/tw/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +114,7 @@
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editing.templates",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -199,6 +138,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\webapp\images" />
       <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\webapp\js" />
       <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\webapp\layouts" />
       <recent name="C:\Users\JLOel\Desktop\asignaturas\tw\practicaFinal2TW\src\main\webapp" />
@@ -398,7 +338,7 @@
       <workItem from="1715355369199" duration="1511000" />
       <workItem from="1715469243098" duration="16000" />
       <workItem from="1715504890884" duration="406000" />
-      <workItem from="1715505356387" duration="16620000" />
+      <workItem from="1715505356387" duration="18673000" />
     </task>
     <servers />
   </component>
