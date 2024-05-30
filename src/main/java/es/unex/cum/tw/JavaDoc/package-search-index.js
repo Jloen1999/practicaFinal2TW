@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"es.unex.cum.tw"},{"l":"es.unex.cum.tw.controllers"},{"l":"es.unex.cum.tw.filters"},{"l":"es.unex.cum.tw.listeners"},{"l":"es.unex.cum.tw.models"},{"l":"es.unex.cum.tw.repositories"},{"l":"es.unex.cum.tw.services"},{"l":"es.unex.cum.tw.util"}];updateSearchResults();

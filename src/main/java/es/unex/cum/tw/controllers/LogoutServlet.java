@@ -29,6 +29,8 @@ public class LogoutServlet extends HttpServlet {
         LoginService auth = new LoginServiceImpl();
         Optional<User> userOptional = auth.authenticate(request); // Obtener el usuario de la sesión
 
+        // Enviar un atributo a todas las vistas jsp
+
         if (userOptional.isPresent()) { // Si el usuario está logueado
             HttpSession session = request.getSession();
             session.invalidate(); // Invalidar la sesión

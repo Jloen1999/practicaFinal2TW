@@ -2,7 +2,6 @@ package es.unex.cum.tw.repositories;
 
 import es.unex.cum.tw.models.Libro;
 import es.unex.cum.tw.models.LibroBuilder;
-import es.unex.cum.tw.models.User;
 import es.unex.cum.tw.models.Valoracion;
 import es.unex.cum.tw.services.ServiceJdbcException;
 
